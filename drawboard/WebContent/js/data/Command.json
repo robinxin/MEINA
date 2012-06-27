@@ -1,0 +1,12 @@
+{ identifier: 'type',
+  label: 'type',
+  items: [
+     {type:"createvsdelete", command:"drawboard.command.CreateVSDeleteCommand",desp0:"create",desp1:"delete"},
+     {type:"move", command:"drawboard.command.MoveCommand",desp0:"create",desp1:"delete"},
+     {type:"zoom", command:"drawboard.command.ZoomCommand",desp0:"create",desp1:"delete"},
+     {type:"style", command:"drawboard.command.StyleCommand",desp0:"create",desp1:"delete"},
+     {type:"combinevsdevided", command:"drawboard.command.CombineVSDevidedCommand",desp0:"create",desp1:"delete"},
+     {type:"addvsdeleteconstrain", command:"drawboard.command.AddVSDeleteConstrainCommand",desp0:"create",desp1:"delete"},
+     {type:"resize", command:"drawboard.command.ResizeCommand",desp0:"create",desp1:"delete"},
+     {type:"rotate", command:"drawboard.command.RotateCommand",desp0:"create",desp1:"delete"}
+]}
