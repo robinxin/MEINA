@@ -1,7 +1,7 @@
 { identifier: 'id',
   label: 'id',
   items: [
-  	 { id:'Root', name:'根节点',children:[{_reference:'save'},{_reference:'previous'},{_reference:'next'},{_reference:'combine'},{_reference:'divide'},{_reference:'stroke'},{_reference:'fill'},{_reference:'strokeWidth'}] },
+  	 { id:'Root', name:'根节点',children:[{_reference:'save'},{_reference:'previous'},{_reference:'next'},{_reference:'combine'},{_reference:'divide'},{_reference:'stroke'},{_reference:'fill'},{_reference:'strokeWidth'},{_reference:'contact'}] },
   	 { id:"save", name:"保存",css:"save",action:"save"},
      { id:"previous", name:"后退",css:"previous",action:"previous"},
      { id:"next", name:"前进",css:"next",action:"next"},
@@ -9,5 +9,6 @@
      { id:"divide", name:"分离",css:"divide",action:"divide"},
      { id:"stroke", name:"外框",css:"stroke",action:"stroke",type:drawboard.Constant.Toolbar.COLORPALETTE},
      { id:"fill", name:"背景色",css:"fill",action:"fill",type:drawboard.Constant.Toolbar.COLORPALETTE},
-     { id:"strokeWidth", name:"线宽",css:"strokeWidth",action:"strokeWidth",type:drawboard.Constant.Toolbar.DROPDOWNLIST,list:[1,2,3,4,5,6,7,8,9,10]}
+     { id:"strokeWidth", name:"线宽",css:"strokeWidth",action:"strokeWidth",type:drawboard.Constant.Toolbar.DROPDOWNLIST,list:[1,2,3,4,5,6,7,8,9,10]},
+     { id:"contact", name:"联系方式",css:"contact",action:"showContact",type:drawboard.Constant.Toolbar.DIALOGUE}
 ]}
