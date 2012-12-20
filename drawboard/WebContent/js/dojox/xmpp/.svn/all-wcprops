@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/xmpp
+END
+PresenceService.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/xmpp/PresenceService.js
+END
+xmppSession.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/xmpp/xmppSession.js
+END
+bosh.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/xmpp/bosh.js
+END
+util.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/xmpp/util.js
+END
+RosterService.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/xmpp/RosterService.js
+END
+UserService.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/xmpp/UserService.js
+END
+ChatService.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/xmpp/ChatService.js
+END
+TransportSession.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/xmpp/TransportSession.js
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/xmpp/README
+END
+sasl.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/xmpp/sasl.js
+END

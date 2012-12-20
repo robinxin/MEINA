@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data
+END
+ItemFileReadStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/ItemFileReadStore.js
+END
+geography_hierarchy_small.json
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/geography_hierarchy_small.json
+END
+countries_withoutid.json
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/countries_withoutid.json
+END
+countries.json
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/countries.json
+END
+countries_references.json
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/countries_references.json
+END
+countries_commentFiltered.json
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/countries_commentFiltered.json
+END
+readOnlyItemFileTestTemplates.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/readOnlyItemFileTestTemplates.js
+END
+runTests.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/runTests.html
+END
+data_multitype.json
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/data_multitype.json
+END
+countries_withDates.json
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/countries_withDates.json
+END
+ItemFileWriteStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/ItemFileWriteStore.js
+END
+reference_integrity.json
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/reference_integrity.json
+END
+geography_hierarchy_large.json
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/geography_hierarchy_large.json
+END
+countries_withNull.json
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/countries_withNull.json
+END
+countries_idcollision.json
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/countries_idcollision.json
+END
+utils.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/utils.js
+END
+countries_withBoolean.json
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/data/countries_withBoolean.json
+END

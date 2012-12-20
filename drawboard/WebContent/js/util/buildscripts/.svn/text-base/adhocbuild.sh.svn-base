@@ -1,0 +1,3 @@
+cd $ADHOC_BASE/WebRoot/adhok/js/util/buildscripts
+pwd
+sh build.sh profileFile=../../../profiles/releaseJs.profile.js action=release  releaseDir=../../../release/ releaseName=myDojo version=1.0.0ver optimize=shrinksafe

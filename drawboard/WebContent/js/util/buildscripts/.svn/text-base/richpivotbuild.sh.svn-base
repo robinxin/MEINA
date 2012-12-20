@@ -1,0 +1,3 @@
+cd $RICHPIVOT_BASE/WebRoot/richpivot/js/dojo1.5/util/buildscripts
+pwd
+sh build.sh profileFile=../../../profiles/richpivot.profile.js action=release  releaseDir=../../../ releaseName=richpivotDojo version=1.0.0ver optimize=shrinksafe

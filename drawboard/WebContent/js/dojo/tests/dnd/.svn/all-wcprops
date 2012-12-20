@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd
+END
+test_box_constraints.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_box_constraints.html
+END
+test_selector.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_selector.html
+END
+test_parent_constraints.html
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_parent_constraints.html
+END
+test_container.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_container.html
+END
+test_params.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_params.html
+END
+test_moveable.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_moveable.html
+END
+flickr_viewer.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/flickr_viewer.html
+END
+dndDefault.css
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/dndDefault.css
+END
+test_selector_markup.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_selector_markup.html
+END
+test_parent_constraints_margins.html
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_parent_constraints_margins.html
+END
+test_custom_constraints.html
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_custom_constraints.html
+END
+test_container_markup.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_container_markup.html
+END
+test_form.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_form.html
+END
+test_dnd_handles.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_dnd_handles.html
+END
+test_dnd.html
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_dnd.html
+END
+test_moveable_markup.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_moveable_markup.html
+END
+test_timed_moveable.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojo/tests/dnd/test_timed_moveable.html
+END

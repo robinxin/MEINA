@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form
+END
+NumberTextBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/NumberTextBox.js
+END
+_FormWidget.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/_FormWidget.js
+END
+ValidationTextBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/ValidationTextBox.js
+END
+ComboBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/ComboBox.js
+END
+CurrencyTextBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/CurrencyTextBox.js
+END
+TimeTextBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/TimeTextBox.js
+END
+Textarea.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/Textarea.js
+END
+_Spinner.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/_Spinner.js
+END
+VerticalRuleLabels.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/VerticalRuleLabels.js
+END
+NumberSpinner.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/NumberSpinner.js
+END
+DateTextBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/DateTextBox.js
+END
+TextBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/TextBox.js
+END
+VerticalRule.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/VerticalRule.js
+END
+Form.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/Form.js
+END
+HorizontalRuleLabels.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/HorizontalRuleLabels.js
+END
+_FormSelectWidget.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/_FormSelectWidget.js
+END
+_FormMixin.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/_FormMixin.js
+END
+_DateTimeTextBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/_DateTimeTextBox.js
+END
+Button.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/Button.js
+END
+VerticalSlider.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/VerticalSlider.js
+END
+ToggleButton.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/ToggleButton.js
+END
+Select.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/Select.js
+END
+HorizontalRule.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/HorizontalRule.js
+END
+Slider.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/Slider.js
+END
+FilteringSelect.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/FilteringSelect.js
+END
+MappedTextBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/MappedTextBox.js
+END
+CheckBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/CheckBox.js
+END
+SimpleTextarea.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/SimpleTextarea.js
+END
+DropDownButton.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/DropDownButton.js
+END
+MultiSelect.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/MultiSelect.js
+END
+RadioButton.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/RadioButton.js
+END
+ComboButton.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/ComboButton.js
+END
+HorizontalSlider.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/HorizontalSlider.js
+END
+RangeBoundTextBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/form/RangeBoundTextBox.js
+END

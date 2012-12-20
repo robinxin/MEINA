@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/enhanced/dnd
+END
+_DndEvents.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/enhanced/dnd/_DndEvents.js
+END
+_DndGrid.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/enhanced/dnd/_DndGrid.js
+END
+_DndBuilder.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/enhanced/dnd/_DndBuilder.js
+END
+_DndMover.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/enhanced/dnd/_DndMover.js
+END
+_DndRowSelector.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/enhanced/dnd/_DndRowSelector.js
+END
+_DndSelectingManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/enhanced/dnd/_DndSelectingManager.js
+END
+_DndFocusManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/enhanced/dnd/_DndFocusManager.js
+END
+_DndMovingManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/enhanced/dnd/_DndMovingManager.js
+END

@@ -1,0 +1,16 @@
+compress.bat dojoCssList.txt css ..\css\cssAll.css 0
+compress.bat selfCssList.txt css ..\css\cssSelfAll.css 1 yuicompressor-2.4.7.jar
+compress.bat jsList.txt js ..\js\jsAll.js 1 yuicompressor-2.4.7.jar
+compress.bat dojoJsList.txt js ..\js\dojoJsAll.js 1 yuicompressor-2.4.7.jar
+
+./compress.sh dojoCssList.txt css ..\css\cssAll.css 0
+./compress.sh selfCssList.txt css ..\css\cssSelfAll.css 1 yuicompressor-2.4.7.jar
+./compress.sh jsList.txt js ..\js\jsAll.js 1 yuicompressor-2.4.7.jar
+./compress.sh dojoJsList.txt js ..\js\dojoJsAll.js 1 yuicompressor-2.4.7.jar
+
+params:
+1:text file path which include many css file
+2:file type,css or js
+3:output path include the file name
+4:path of the jar which can compress and combine css file
+

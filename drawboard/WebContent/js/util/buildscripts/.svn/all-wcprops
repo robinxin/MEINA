@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/BI/!svn/ver/1976/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/LICENSE
+END
+listProfileDeps.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/listProfileDeps.js
+END
+copyright.txt
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/copyright.txt
+END
+clean_release.sh
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/clean_release.sh
+END
+richpivotbuild.bat
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/richpivotbuild.bat
+END
+cdnBuild.sh
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/cdnBuild.sh
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/README
+END
+mk_branch.sh
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/mk_branch.sh
+END
+makeDojoJsWeb.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/makeDojoJsWeb.js
+END
+richpivotbuild.sh
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/richpivotbuild.sh
+END
+webbuild.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/webbuild.html
+END
+cdnBuild.txt
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/cdnBuild.txt
+END
+build.bat
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/build.bat
+END
+changeVersion.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/changeVersion.js
+END
+adhocbuild.sh
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1976/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/adhocbuild.sh
+END
+build_release.sh
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/build_release.sh
+END
+build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/build.sh
+END
+build.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/build.js
+END
+build_notice.txt
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/build_notice.txt
+END

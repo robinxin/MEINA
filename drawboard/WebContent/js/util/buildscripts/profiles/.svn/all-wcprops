@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles
+END
+standardCustomBase.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/standardCustomBase.profile.js
+END
+base.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/base.profile.js
+END
+cometd.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/cometd.profile.js
+END
+dtkapi.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/dtkapi.profile.js
+END
+demos-all.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/demos-all.profile.js
+END
+fx.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/fx.profile.js
+END
+baseplus.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/baseplus.profile.js
+END
+layers.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/layers.profile.js
+END
+rhino.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/rhino.profile.js
+END
+sql.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/sql.profile.js
+END
+standard.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/standard.profile.js
+END
+storage.profile.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/profiles/storage.profile.js
+END

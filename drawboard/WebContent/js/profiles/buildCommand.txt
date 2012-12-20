@@ -1,0 +1,1 @@
+build profileFile=../../profiles/releaseJs.profile.js action=release  releaseDir=../../ releaseName=DRAWBOARDED version=1.0.0ver optimize=shrinksafe

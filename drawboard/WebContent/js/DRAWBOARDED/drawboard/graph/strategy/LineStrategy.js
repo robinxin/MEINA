@@ -1,0 +1,8 @@
+/*
+	Copyright (c) 2004-2011, The Dojo Foundation All Rights Reserved.
+	Available via Academic Free License >= 2.1 OR the modified BSD license.
+	see: http://dojotoolkit.org/license for details
+*/
+
+
+if(!dojo._hasResource["drawboard.graph.strategy.LineStrategy"]){dojo._hasResource["drawboard.graph.strategy.LineStrategy"]=true;dojo.provide("drawboard.graph.strategy.LineStrategy");dojo.require("drawboard.controller.StyleController");dojo.require("drawboard.graph.strategy.GraphStrategy");(function(){var _1=common.calc.Geometry,_2=drawboard.Constant;dojo.declare("drawboard.graph.strategy.LineStrategy",drawboard.graph.strategy.GraphStrategy,{_hasRotator:false,isIn:function(gp,_3,_4){var _5=gp.getGraphCoordinates(_4);return _1.isPointInSegment(_5[0],_5[1],_3);},isAnchor:function(d){return true;},draw:function(gp,gf,_6){var p=_2.Path,_7=gp.getGraphCoordinates(_6);gf.drawLine(_7[0],_7[1],this.getStyle(gp,_6));},getActiveAnchors:function(gp,_8){return drawboard.skeletonController.create(gp.getSkeletonCoordinates(_8));},getSkeletonCoordinates:function(gp,_9){var _a=gp.getCoordinate(_9),w=gp.getWidth(_9),h=gp.getHeight(_9),x=_a.x,y=_a.y;return [{x:x,y:y,css:"mover_nw"},{x:x+w,y:y+h,css:"mover_se"}];},getGraphCoordinates:function(gp,_b){var _c=gp.getCoordinate(_b),w=gp.getWidth(_b),h=gp.getHeight(_b),x=_c.x,y=_c.y;return [{x:x,y:y,css:"mover_nw",isAnchored:true},{x:x+w,y:y+h,css:"mover_se",isAnchored:true}];},getMotionAnchorCoordinates:function(gp,_d){return null;}});})();}

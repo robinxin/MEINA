@@ -1,0 +1,8 @@
+/*
+	Copyright (c) 2004-2011, The Dojo Foundation All Rights Reserved.
+	Available via Academic Free License >= 2.1 OR the modified BSD license.
+	see: http://dojotoolkit.org/license for details
+*/
+
+
+if(!dojo._hasResource["drawboard.graph.decorate.controller.MotionAnchorController"]){dojo._hasResource["drawboard.graph.decorate.controller.MotionAnchorController"]=true;dojo.provide("drawboard.graph.decorate.controller.MotionAnchorController");dojo.require("drawboard.graph.decorate.controller.Controller");dojo.require("drawboard.controller.StyleController");dojo.require("drawboard.graph.decorate.MotionAnchor");dojo.require("common.utils.CollectionUtils");dojo.require("common.calc.Geometry");(function(){var _1=common.calc.Geometry,_2=common.utils.CollectionUtils;dojo.declare("drawboard.graph.decorate.controller.MotionAnchorController",drawboard.graph.decorate.controller.Controller,{type:drawboard.Constant.Decorate.MOTIONANCHOR,draw:function(gp,_3){var _4,_5=new drawboard.graph.decorate.MotionAnchor(),gf=_3.getGraphic(),_6=gp.getMotionAnchorCoordinates(_3);_6&&dojo.forEach(_6,function(_7,_8){_4=_2.sliceRange(_7,1,4);_5.setCoordinate(_4);_5.setIndex(_8),_5.draw(gf,this.getStyle(gp,_5,_3),_3);},this);},active:function(gp,_9,_a){var _b,_c=gp.getMotionAnchorCoordinates(_a),_d;_c&&dojo.some(_c,function(_e,_f){_d=_e[0];_e=_2.sliceRange(_e,1,4);if(_1.isPointInPolyn(_e,_9)){_b=new drawboard.graph.decorate.MotionAnchor({coordinate:_e,index:_f,center:_d});return true;}},this);return _b;}});if(!drawboard.motionAnchorController){drawboard.motionAnchorController=new drawboard.graph.decorate.controller.MotionAnchorController();}})();}

@@ -1,16 +1,14 @@
 { identifier: 'id',
   label: 'id',
   items: [
-  	 { id:"Root", name:"根节点",children:[{_reference:"Basic"},{_reference:"Shortcut"},{_reference:"FloorPlan"}]},
-  	 { id:"Shortcut", name:"图片",children:[{_reference:"testImage"}] },
-     { id:"testImage", name:"图片",css:"testImage",strategy:"drawboard.graph.strategy.ImageStrategy",url:"images/keyenter.png"},
+  	 { id:"Root", name:"根节点",children:[{_reference:"Basic"},{_reference:"FloorPlan"}]},
   	 
      { id:'Basic', name:'基本形状',children:[{_reference:'Rectangle'},{_reference:'RounderRectangle'},
      										{_reference:'Square'},{_reference:'RounderSquare'},
      										{_reference:'Circle'},{_reference:'MotionCircle'},
-										{_reference:'Oval'},{_reference:'Line'},
+										{_reference:'BrokenLine'},{_reference:'Line'},
      										{_reference:'Triangle'},{_reference:'RightTriangle'},
-     										{_reference:'Diamond'},
+     										{_reference:'Diamond'},{_reference:'Oval'},
      										{_reference:'FFOneWayArrow'},{_reference:'FFDoubleSideArrow'}
 										]},
      { id:"Rectangle", name:"矩形",css:"rectangle",strategy:"drawboard.graph.strategy.RectangleStrategy"},
@@ -23,6 +21,7 @@
      { id:"Triangle", name:"三角形",css:"triangle",strategy:"drawboard.graph.strategy.TriangleStrategy"},
      { id:"RightTriangle", name:"直角三角形",css:"rightTriangle",strategy:"drawboard.graph.strategy.RightTriangleStrategy"},
      { id:"Line", name:"直线",css:"line",strategy:"drawboard.graph.strategy.LineStrategy"},
+     { id:"BrokenLine", name:"连接线",css:"brokenLine",strategy:"drawboard.graph.strategy.BrokenLineStrategy",affectedByZoom:true},
      { id:"Diamond", name:"菱形",css:"diamond",strategy:"drawboard.graph.strategy.DiamondStrategy"},
      { id:"FFOneWayArrow", name:"45度单向箭头",css:"FFOneWayArrow",strategy:"drawboard.graph.strategy.arrow.FFOneWayArrowStrategy"},
      { id:"FFDoubleSideArrow", name:"45度双向箭头",css:"FFDoubleSideArrow",strategy:"drawboard.graph.strategy.arrow.FFDoubleSideArrowStrategy"},

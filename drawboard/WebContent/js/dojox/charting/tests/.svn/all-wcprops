@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests
+END
+test_chart2d_dynamics.html
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_chart2d_dynamics.html
+END
+test_tension.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_tension.html
+END
+test_chart2d_updating.html
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_chart2d_updating.html
+END
+test_win2d.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_win2d.html
+END
+test_DataSeries.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_DataSeries.html
+END
+test_rotatedLabels.html
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_rotatedLabels.html
+END
+test_series_order.html
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_series_order.html
+END
+test_themes.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_themes.html
+END
+test_chart2d.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_chart2d.html
+END
+test_bars.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_bars.html
+END
+test_fireEvent.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_fireEvent.html
+END
+runTests.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/runTests.html
+END
+test_labels2d.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_labels2d.html
+END
+stock.json
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/stock.json
+END
+test_DataChart.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_DataChart.html
+END
+test_cylinders.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_cylinders.html
+END
+test_nulls.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_nulls.html
+END
+test_axes.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_axes.html
+END
+test_pie2d.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_pie2d.html
+END
+theme_preview.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/theme_preview.html
+END
+test_event2d.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_event2d.html
+END
+charting.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/charting.js
+END
+test_plot_order.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_plot_order.html
+END
+test_scaler.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_scaler.html
+END
+test_widget2d.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_widget2d.html
+END
+test_axisZoomControl.html
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_axisZoomControl.html
+END
+test_anim2d.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_anim2d.html
+END
+Theme.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/Theme.js
+END
+test_sparklines.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/charting/tests/test_sparklines.html
+END

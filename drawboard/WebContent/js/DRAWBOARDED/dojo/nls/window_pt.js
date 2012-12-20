@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.window_pt");dojo.provide("dijit.nls.common");dijit.nls.common._built=true;dojo.provide("dijit.nls.common.pt");dijit.nls.common.pt={"buttonOk":"OK","buttonCancel":"Cancelar","buttonSave":"Salvar","itemClose":"Fechar"};

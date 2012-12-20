@@ -8,5 +8,6 @@
      {type:"combinevsdevided", command:"drawboard.command.CombineVSDevidedCommand",desp0:"create",desp1:"delete"},
      {type:"addvsdeleteconstrain", command:"drawboard.command.AddVSDeleteConstrainCommand",desp0:"create",desp1:"delete"},
      {type:"resize", command:"drawboard.command.ResizeCommand",desp0:"create",desp1:"delete"},
-     {type:"rotate", command:"drawboard.command.RotateCommand",desp0:"create",desp1:"delete"}
+     {type:"rotate", command:"drawboard.command.RotateCommand",desp0:"create",desp1:"delete"},
+     {type:"motion", command:"drawboard.command.MotionCommand",desp0:"create",desp1:"delete"}
 ]}

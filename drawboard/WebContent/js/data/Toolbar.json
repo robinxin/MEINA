@@ -1,14 +1,22 @@
 { identifier: 'id',
   label: 'id',
   items: [
-  	 { id:'Root', name:'根节点',children:[{_reference:'save'},{_reference:'previous'},{_reference:'next'},{_reference:'combine'},{_reference:'divide'},{_reference:'stroke'},{_reference:'fill'},{_reference:'strokeWidth'},{_reference:'contact'}] },
+  	 { id:'Root', name:'根节点',children:[{_reference:'save'},{_reference:'previous'},{_reference:'next'},
+					      {_reference:'combine'},{_reference:'divide'},{_reference:'stroke'},
+					      {_reference:'fill'},{_reference:'strokeWidth'},{_reference:'text'},
+					      {_reference:'fontColor'},{_reference:'fontSize'},{_reference:'fontFamily'},
+					      {_reference:'contact'}]},
   	 { id:"save", name:"保存",css:"save",action:"save"},
      { id:"previous", name:"后退",css:"previous",action:"previous"},
      { id:"next", name:"前进",css:"next",action:"next"},
+     { id:"text", name:"文本",css:"text",action:"text"},
      { id:"combine", name:"组合",css:"combine",action:"combine"},
      { id:"divide", name:"分离",css:"divide",action:"divide"},
      { id:"stroke", name:"外框",css:"stroke",action:"stroke",type:drawboard.Constant.Toolbar.COLORPALETTE},
      { id:"fill", name:"背景色",css:"fill",action:"fill",type:drawboard.Constant.Toolbar.COLORPALETTE},
      { id:"strokeWidth", name:"线宽",css:"strokeWidth",action:"strokeWidth",type:drawboard.Constant.Toolbar.DROPDOWNLIST,list:[1,2,3,4,5,6,7,8,9,10]},
+     { id:"fontColor", name:"字体颜色",css:"fontColor",action:"fontColor",type:drawboard.Constant.Toolbar.COLORPALETTE},
+     { id:"fontSize", name:"字号",css:"fontSize",action:"fontSize",type:drawboard.Constant.Toolbar.DROPDOWNLIST,list:[6,8,9,10,12,14,16,18,24,30,36,48,60]},
+     { id:"fontFamily", name:"字体族",css:"fontFamily",action:"fontFamily",type:drawboard.Constant.Toolbar.DROPDOWNLIST,list:['Microsoft YaHei']},
      { id:"contact", name:"联系方式",css:"contact",action:"showContact",type:drawboard.Constant.Toolbar.DIALOGUE}
 ]}

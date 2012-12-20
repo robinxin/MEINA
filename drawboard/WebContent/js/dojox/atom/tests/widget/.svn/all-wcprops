@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/atom/tests/widget
+END
+test_FeedViewer_bind_sync.html
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/atom/tests/widget/test_FeedViewer_bind_sync.html
+END
+test_FeedViewer_bind_split_declarative.html
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/atom/tests/widget/test_FeedViewer_bind_split_declarative.html
+END
+test_FeedViewer_local.html
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/atom/tests/widget/test_FeedViewer_local.html
+END
+test_FeedViewer_bind.html
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/atom/tests/widget/test_FeedViewer_bind.html
+END
+samplefeed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/atom/tests/widget/samplefeed.xml
+END
+test_FeedViewer_local_declarative.html
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/atom/tests/widget/test_FeedViewer_local_declarative.html
+END
+samplefeedEdit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/atom/tests/widget/samplefeedEdit.xml
+END

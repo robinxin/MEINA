@@ -1,0 +1,42 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">-->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- only needed for test files: -->
+<style>
+	v\:* { Behavior: url(#default#VML);}
+	o\:* { Behavior: url(#default#VML);}
+</style>
+<style type="text/css">
+	@import "../dojo/resources/dojo.css";
+</style>
+<!-- required: the default dijit theme: -->
+<link id="themeStyles" rel="stylesheet" href="../dijit/themes/claro/claro.css">
+<!-- required: supplemental styles for this widget -->
+<link rel="stylesheet" href="../dojox/layout/resources/ExpandoPane.css" />
+<link rel="stylesheet" href="../../css/drawboard.css">
+<link rel="stylesheet" href="../../css/graphs.css">
+<title>test</title>
+</head>
+<script type="text/javascript" src="../dojo/dojo.js" djConfig="isDebug: false, parseOnLoad: true"></script>
+<script type="text/javascript" src="../RuntimeSetting.js"></script>
+<script type="text/javascript" src="../drawboard/DrawBoard.js"></script>
+<script type="text/javascript" src="../drawboard/_Event.js"></script>
+<script type="text/javascript" src="../drawboard/_Selector.js"></script>
+<script type="text/javascript" src="../drawboard/graph/GraphProxy.js"></script>
+<script type="text/javascript" src="../drawboard/graph/GraphStatus.js"></script>
+<script type="text/javascript" src="../drawboard/graphic/SVGGraphic.js"></script>
+<script type="text/javascript" src="../drawboard/graphic/SVGIEGraphic.js"></script>
+<script type="text/javascript" src="../drawboard/graphic/VMLGraphic.js"></script>
+<script>
+    dojo.addOnLoad(function(){
+		dojo.require("myTests.testJs");
+		myTests.testJs.test();
+    });
+</script>
+<body class="claro" style="margin:0px;overflow:hidden;">
+	<div id="navigator" class="navigator"></div>
+	<div id="toolsNode" class="tools"></div>
+	<div id="graphNode" class="canvas"></div>
+</body>
+</html>

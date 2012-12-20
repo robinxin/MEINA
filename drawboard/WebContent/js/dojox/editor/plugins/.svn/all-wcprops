@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins
+END
+PrettyPrint.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/PrettyPrint.js
+END
+NormalizeIndentOutdent.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/NormalizeIndentOutdent.js
+END
+Breadcrumb.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/Breadcrumb.js
+END
+Blockquote.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/Blockquote.js
+END
+StatusBar.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/StatusBar.js
+END
+FindReplace.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/FindReplace.js
+END
+CollapsibleToolbar.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/CollapsibleToolbar.js
+END
+ToolbarLineBreak.js
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/ToolbarLineBreak.js
+END
+_SmileyPalette.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/_SmileyPalette.js
+END
+Preview.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/Preview.js
+END
+PageBreak.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/PageBreak.js
+END
+NormalizeStyle.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/NormalizeStyle.js
+END
+TextColor.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/TextColor.js
+END
+ShowBlockNodes.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/ShowBlockNodes.js
+END
+UploadImage.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/UploadImage.js
+END
+TablePlugins.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/TablePlugins.js
+END
+EntityPalette.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/EntityPalette.js
+END
+PasteFromWord.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/PasteFromWord.js
+END
+Save.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/Save.js
+END
+InsertAnchor.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/InsertAnchor.js
+END
+InsertEntity.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/InsertEntity.js
+END
+Smiley.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/editor/plugins/Smiley.js
+END

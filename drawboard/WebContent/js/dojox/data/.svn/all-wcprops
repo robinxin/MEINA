@@ -1,0 +1,227 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data
+END
+OpenSearchStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/OpenSearchStore.js
+END
+CsvStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/CsvStore.js
+END
+CdfStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/CdfStore.js
+END
+AndOrReadStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/AndOrReadStore.js
+END
+StoreExplorer.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/StoreExplorer.js
+END
+ServiceStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/ServiceStore.js
+END
+PicasaStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/PicasaStore.js
+END
+XmlStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/XmlStore.js
+END
+QueryReadStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/QueryReadStore.js
+END
+ItemExplorer.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/ItemExplorer.js
+END
+GoogleSearchStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/GoogleSearchStore.js
+END
+WikipediaStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/WikipediaStore.js
+END
+restListener.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/restListener.js
+END
+OpmlStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/OpmlStore.js
+END
+ClientFilter.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/ClientFilter.js
+END
+FlickrRestStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/FlickrRestStore.js
+END
+RailsStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/RailsStore.js
+END
+FlickrStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/FlickrStore.js
+END
+css.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/css.js
+END
+HtmlTableStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/HtmlTableStore.js
+END
+AppStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/AppStore.js
+END
+CssRuleStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/CssRuleStore.js
+END
+S3Store.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/S3Store.js
+END
+KeyValueStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/KeyValueStore.js
+END
+AtomReadStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/AtomReadStore.js
+END
+JsonQueryRestStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/JsonQueryRestStore.js
+END
+PersevereStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/PersevereStore.js
+END
+GoogleFeedStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/GoogleFeedStore.js
+END
+dom.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/dom.js
+END
+HtmlStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/HtmlStore.js
+END
+CouchDBRestStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/CouchDBRestStore.js
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/README
+END
+JsonRestStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/JsonRestStore.js
+END
+AndOrWriteStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/AndOrWriteStore.js
+END
+CssClassStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/CssClassStore.js
+END
+SnapLogicStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/SnapLogicStore.js
+END
+FileStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/data/FileStore.js
+END

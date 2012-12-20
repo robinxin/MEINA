@@ -1,0 +1,180 @@
+/************************
+ *		navigator
+ ************************/
+ .navigator{
+ 	
+ }
+ .toolbar{
+	background-color: #CDE8FF;
+    border-color: #92BCE1;
+    height: 30px;
+ }
+ .toolbarFloatCover{
+ 	background: url("../images/appbar_mouseover_bg.png");
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	z-index:1;
+	cursor:pointer;
+ }
+ .toolbarIcon{
+ 	height: 25px;
+	width: 25px;
+	cursor:pointer;
+	background: url("../images/toolbar.png");
+ }
+ .toolbarUL{
+    height: 30px;
+	margin: 0px;
+	padding: 0;
+	position: relative;
+	overflow:hidden;
+}
+.toolbarDiv {
+	display: inline;
+	float: left;
+	list-style: none;
+	margin: 3px;
+	padding: 0px;
+	cursor:pointer;
+}
+.save{
+	background-position: 3px -1063px;
+}
+.previous{
+	background-position: -21px -922px;
+}
+.next{
+	background-position: 1px -979px;
+}
+.combine{
+	background-position: -18px 3px;
+}
+.divide{
+	background-position: -38px -416px;
+}
+.contact{
+	background-position: 3px -169px;
+}
+.text{
+	background-position: -40px -1225px;
+}
+/************************
+ *		tools
+ ************************/
+ .tools{
+ 	float:left;
+ }
+/************************
+ *		canvas
+ ************************/
+ .canvas{
+ 	float:left;
+ 	overflow:hidden;
+ 	background:url(../images/checker-bg.png);
+ }
+/************************
+ *	cursor direction
+ ***********************/
+  .mover_n{
+ 	cursor: n-resize;
+ }
+  .mover_ne{
+ 	cursor: ne-resize;
+ }
+  .mover_w{
+ 	cursor: w-resize;
+ }
+  .mover_nw{
+ 	cursor: nw-resize;
+ }
+  .mover_sw{
+ 	cursor: sw-resize;
+ }
+  .mover_e{
+ 	cursor: e-resize;
+ }
+  .mover_se{
+ 	cursor: se-resize;
+ }
+  .mover_s{
+ 	cursor: s-resize;
+ }
+ /***************************
+ *	Graph Container
+ ****************************/
+ .claro .dijitAccordionContainer .dijitAccordionContainer-child{
+ 	padding:3px;
+ }
+
+ /***************************
+ *	Graph css
+ ****************************/
+ .graphIconContainer,.graphIcon{
+ 	height:26px;
+ 	cursor:pointer;
+ }
+ .graphIconContainer{
+ 	width:70px !important;
+ 	width:89px;
+ 	margin:2px;
+ 	padding:2px;
+ 	border: 1px solid transparent;
+ 	float:left;
+ }
+ .graphIcon{
+ 	width:30px;
+ 	float:left;
+ 	background:url(../images/graphs.png);
+ }
+ .graphText{
+ 	display: inline-block;
+ 	width: 40px;
+ }
+ .graphOver{
+ 	background-color:#fee58b;
+ 	border:1px solid gray;
+ }
+ .graphClick{
+ 	background-color:#ffd96c;
+ 	border:1px solid gray;
+ }
+ .line{
+ 	background-position: -1px -136px;
+ }
+ .brokenLine{
+	background-position: 0px -4088px;
+ }
+ .rectangle{
+ 	background-position: 1px -160px; 
+ }
+ .square{
+ 	background-position: 1px -160px;
+ }
+ .oval{
+ 	background-position: 1px -3620px;
+ }
+ .circle{
+ 	background-position: 1px -210px;
+ }
+ .motioncircle{
+ 	background-position: 1px -240px;
+ }
+ .rounderRectangle{
+ 	background-position: 1px -185px;
+ }
+ .triangle{
+ 	background-position: 1px -3065px;
+ }
+ .rightTriangle{
+ 	background-position: 1px -2088px;
+ }
+ .FFOneWayArrow{
+ 	background-position: 1px -1165px;
+ }
+ .FFDoubleSideArrow{
+ 	background-position: 1px -1269px;
+ }
+ .diamond{
+	background-position:0px -2959px;
+ }

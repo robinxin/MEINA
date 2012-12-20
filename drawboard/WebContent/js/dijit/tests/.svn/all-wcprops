@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests
+END
+_Container.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_Container.html
+END
+test_instantiate.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_instantiate.html
+END
+_loadTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_loadTest.js
+END
+runTests.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/runTests.html
+END
+test_Tooltip.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_Tooltip.html
+END
+test_Tree_Notification_API_Support.html
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_Tree_Notification_API_Support.html
+END
+Widget-placeAt.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/Widget-placeAt.html
+END
+_Widget-attr.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_Widget-attr.html
+END
+test_ColorPalette_quirks.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_ColorPalette_quirks.html
+END
+test_ColorPalette.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_ColorPalette.html
+END
+test_Tree.html
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_Tree.html
+END
+_testCommon.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_testCommon.js
+END
+formAction.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/formAction.html
+END
+_Widget-subscribe.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_Widget-subscribe.html
+END
+test_Dialog_focusDestroy.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_Dialog_focusDestroy.html
+END
+bidi.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/bidi.html
+END
+_Widget-connect-performance.html
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_Widget-connect-performance.html
+END
+_altCalendar.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_altCalendar.html
+END
+test_TooltipDialog.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_TooltipDialog.html
+END
+infrastructure-module.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/infrastructure-module.js
+END
+test_bgIframe.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_bgIframe.html
+END
+quirks.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/quirks.html
+END
+_Templated.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_Templated.html
+END
+_Widget-lifecycle.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_Widget-lifecycle.html
+END
+test.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test.html
+END
+loose.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/loose.html
+END
+test_TitlePane.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_TitlePane.html
+END
+test_Declaration.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_Declaration.html
+END
+test_Menu_iframe.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_Menu_iframe.html
+END
+_Widget-ondijitclick.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_Widget-ondijitclick.html
+END
+_testMatrix.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_testMatrix.php
+END
+test_ProgressBar.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_ProgressBar.html
+END
+test_InlineEditBox.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_InlineEditBox.html
+END
+module.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/module.js
+END
+test_Dialog.html
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_Dialog.html
+END
+Tree.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/Tree.html
+END
+test_Toolbar.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_Toolbar.html
+END
+test_Menu.html
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_Menu.html
+END
+_Templated-widgetsInTemplate.html
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_Templated-widgetsInTemplate.html
+END
+general-module.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/general-module.js
+END
+Tree_with_JRS.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/Tree_with_JRS.html
+END
+strict.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/strict.html
+END
+test_Calendar.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/test_Calendar.html
+END
+helpers.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/helpers.js
+END
+_Widget-deferredConnect.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dijit/tests/_Widget-deferredConnect.html
+END

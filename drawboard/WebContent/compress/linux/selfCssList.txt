@@ -1,0 +1,12 @@
+../../css/style.css
+../../themes/star.css
+../../css/richpivot/richpivotpage.css
+../../css/richpivot/mainpage.css
+../../css/richpivot/themes/gray/mainpage.css
+../../css/richpivot/themes/gray/cssClassNavi.css
+../../css/richpivot/themes/gray/table.css
+../../css/richpivot/themes/gray/toolbar.css
+../../css/dashboard.css
+../../js/component/themes/viewwidget_theme/viewwidget_theme.css
+../../js/component/themes/scalingwindow_theme/scalingwindow_theme.css
+../../js/component/themes/framewidget_theme/framewidget_theme.css

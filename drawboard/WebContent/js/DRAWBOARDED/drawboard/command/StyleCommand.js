@@ -1,0 +1,8 @@
+/*
+	Copyright (c) 2004-2011, The Dojo Foundation All Rights Reserved.
+	Available via Academic Free License >= 2.1 OR the modified BSD license.
+	see: http://dojotoolkit.org/license for details
+*/
+
+
+if(!dojo._hasResource["drawboard.command.StyleCommand"]){dojo._hasResource["drawboard.command.StyleCommand"]=true;dojo.provide("drawboard.command.StyleCommand");dojo.require("drawboard.command.Command");dojo.declare("drawboard.command.StyleCommand",drawboard.command.Command,{_style:null,getType:function(){return this.getConstant().STYLECOMMAND;},getStyle:function(){var _1=this._style;if(!_1){this._style=_1={};}return _1;},positive:function(){var _2=this.getExecutor(),_3=this.getMemo();if(!this._style&&_2.containGraphStyle(_3.gp)){this._style=_2.getGraphStyleValue(_3.gp,_3.attr);}_2.addGraphStyle(_3.gp,_3.attr,_3.value,_3.isText);if(_3.gp.isComposite()){var _4=this.getStyle();_3.gp.forInItems(function(_5){if(_2.containGraphStyle(_5.gp)){_4[_5.gp.getIdty()]=_2.getGraphStyleValue(_5.gp,_3.attr);}_2.addGraphStyle(_5.gp,_3.attr,_3.value,_3.isText);},this);}},negative:function(){var _6=this.getExecutor(),_7=this.getMemo();if(_7.gp.isComposite()){var _8=this.getStyle(),_9;_7.gp.forInItems(function(_a){_9=_8[_a.gp.getIdty()];if(_9){_6.addGraphStyle(_a.gp,_7.attr,_9,_7.isText);return;}_6.removeGraphStyle(_a.gp,_7.attr);},this);return;}if(this._style){_6.addGraphStyle(_7.gp,_7.attr,this._style,_7.isText);return;}_6.removeGraphStyle(_7.gp,_7.attr);},_merge:function(_b){return false;}});}

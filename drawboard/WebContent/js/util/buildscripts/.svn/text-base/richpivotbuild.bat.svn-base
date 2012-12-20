@@ -1,0 +1,1 @@
+build profileFile=../../../profiles/richpivot.profile.js action=release  releaseDir=../../../ releaseName=richpivotDojo version=1.0.0ver optimize=shrinksafe

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/docscripts/modules
+END
+dojo.module
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/docscripts/modules/dojo.module
+END
+dojox.module.properties
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/docscripts/modules/dojox.module.properties
+END
+dijit.module
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/docscripts/modules/dijit.module
+END

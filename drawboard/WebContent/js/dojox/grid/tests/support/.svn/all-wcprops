@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support
+END
+data.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/data.php
+END
+json.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/json.php
+END
+testtbl.sql
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/testtbl.sql
+END
+yahoo_search.js
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/yahoo_search.js
+END
+test_data_date.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/test_data_date.js
+END
+test_resize_data.json
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/test_resize_data.json
+END
+numbers.json
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/numbers.json
+END
+test_data.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/test_data.js
+END
+geography.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/geography.xml
+END
+countryStore.json
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/countryStore.json
+END
+gamedata.json
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/gamedata.json
+END
+books.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/books.xml
+END
+movies.csv
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/dojox/grid/tests/support/movies.csv
+END

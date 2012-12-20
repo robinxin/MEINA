@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/zoneinfo
+END
+tzdata2009k.tar.gz
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/zoneinfo/tzdata2009k.tar.gz
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/zoneinfo/LICENSE
+END
+strip_olson_comments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/zoneinfo/strip_olson_comments.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/BI/!svn/ver/1540/trunks/AdhocHibernate/WebRoot/adhok/js/util/buildscripts/zoneinfo/README
+END

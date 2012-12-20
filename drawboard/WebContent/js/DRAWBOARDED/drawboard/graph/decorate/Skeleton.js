@@ -1,0 +1,8 @@
+/*
+	Copyright (c) 2004-2011, The Dojo Foundation All Rights Reserved.
+	Available via Academic Free License >= 2.1 OR the modified BSD license.
+	see: http://dojotoolkit.org/license for details
+*/
+
+
+if(!dojo._hasResource["drawboard.graph.decorate.Skeleton"]){dojo._hasResource["drawboard.graph.decorate.Skeleton"]=true;dojo.provide("drawboard.graph.decorate.Skeleton");dojo.require("drawboard.Constant");dojo.require("drawboard.graph.decorate.Decorator");(function(){var _1=drawboard.Constant;dojo.declare("drawboard.graph.decorate.Skeleton",drawboard.graph.decorate.Decorator,{_type:_1.Decorate.SKELETON,_direct:null,_isAnchored:false,anchored:function(_2){this._isAnchored=_2;},isAnchored:function(){return this._isAnchored;},getDirect:function(){var _3=this._direct,t;if(typeof _3=="number"){return _3;}if(_3!==null&&_3!==undefined){var d=_1.Direction;switch(_3){case "mover_n":t=d.NORTH;break;case "mover_s":t=d.SOUTH;break;case "mover_w":t=d.WEST;break;case "mover_e":t=d.EAST;break;case "mover_nw":t=d.WESTNORTH;break;case "mover_ne":t=d.EASTNORTH;break;case "mover_sw":t=d.WESTSOUTH;break;case "mover_se":t=d.EASTSOUTH;break;default:t=d.NORTH;break;}this._direct=t;}return t;},draw:function(gp,_4,_5){var p=this.getCoordinate(),_6=_1.Path;paths=[{command:_6.MOVE,points:p[0]},{command:_6.LINE,points:p[1]},{command:_6.LINE,points:p[2]},{command:_6.LINE,points:p[3]}];gp.drawPath(paths,_4);}});})();}
