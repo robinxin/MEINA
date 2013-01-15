@@ -3,6 +3,7 @@ dojo.require("drawboard.board.TextBoard");
 dojo.require("common.utils.BrowerUtils");
 dojo.require("drawboard.graphic.SVGGraphic");
 dojo.require("drawboard.graphic.SVGIEGraphic");
+dojo.require("drawboard.graphic.VMLGraphic");
 dojo.require("drawboard.graph.strategy.TextStrategy");
 dojo.require("drawboard.graph.strategy.BrokenLineStrategy");
 dojo.require("drawboard.graph.strategy.ImageStrategy");

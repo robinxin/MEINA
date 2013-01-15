@@ -1,33 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- only needed for test files: -->
-<style type="text/css">
-	@import "js/DRAWBOARDED/dojo/resources/dojo.css";
-</style>
-<!-- required: the default dijit theme: -->
-<link id="themeStyles" rel="stylesheet" href="js/DRAWBOARDED/dijit/themes/claro/claro.css">
-<!-- required: supplemental styles for this widget -->
-<link rel="stylesheet" href="js/DRAWBOARDED/dojox/layout/resources/ExpandoPane.css" />
-<link rel="stylesheet" href="css/drawboard.css">
-<link rel="stylesheet" href="css/graphs.css">
 <title>test</title>
 </head>
 <script type="text/javascript" src="js/DRAWBOARDED/dojo/dojo.js" djConfig="isDebug: false, parseOnLoad: true"></script>
-<script type="text/javascript" src="js/RuntimeSettingCompressed.js"></script>
 <script type="text/javascript" src="js/DRAWBOARDED/dojo/dojoBase.js"></script>
 <script type="text/javascript" src="js/DRAWBOARDED/dojo/common.js"></script>
-<script type="text/javascript" src="js/DRAWBOARDED/dojo/drawboard.js"></script>
-<script type="text/javascript" src="js/DRAWBOARDED/dojo/window.js"></script>
 <script>
-    dojo.addOnLoad(function(){
-		window.Entrance.test();
-    });
+    var browerType = common.utils.BrowerUtils.getBrowerType(),
+        version = browerType.ie;
+    if(version){
+        version = version.substr(0,1);
+        if(version == "8" || version == "7" || version == "6" || version == "5"){
+            window.location.href = './index4IELower.html';
+        }else{
+            window.location.href = './indexPublish.html';    
+        }
+    }else{
+        window.location.href = './indexPublish.html';
+    }
 </script>
-<body class="claro" style="margin:0px;overflow:hidden;">
-	<div id="navigator" class="navigator"></div>
-	<div id="toolsNode" class="tools"></div>
-	<div id="graphNode" class="canvas"></div>
-</body>
 </html>

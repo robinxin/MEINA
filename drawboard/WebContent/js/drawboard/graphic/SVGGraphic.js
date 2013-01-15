@@ -5,10 +5,12 @@
 dojo.provide("drawboard.graphic.SVGGraphic");
 dojo.require("drawboard.graphic.Graphic");
 dojo.require("common.utils.BrowerUtils");
+dojo.require("drawboard.Constant");
 (function(){
 var svgNS = "http://www.w3.org/2000/svg",
 	xlinkNS="http://www.w3.org/1999/xlink",
 	attr = dojo.attr,
+	constant = drawboard.Constant,
 	pathName = window.location.pathname,
 	rootName = pathName.substring(0, pathName.indexOf("/",1) + 1),
 	/*void*/attrNS = function(/*Node*/node,/*String*/ns,/*String*/attribute,/*String*/value){
@@ -17,9 +19,13 @@ var svgNS = "http://www.w3.org/2000/svg",
 	/*Node*/createNS = function(/*String*/ele){
 		return document.createElementNS?document.createElementNS(svgNS,ele):document.createElement(ele);
 	},
-	utils = common.utils.BrowerUtils;
+	utils = common.utils.BrowerUtils,
+	markReg = new RegExp("(path|image|rect|ellipse|line|test)",'ig');
+markReg.compile();
 dojo.declare("drawboard.graphic.SVGGraphic",drawboard.graphic.Graphic,{
 	/*Node*/anchor:null,
+	/*Constant*/type: constant.GraphicType.SVG,
+	
 	/*Node*/createAnchor:function(/*Double*/w,/*Double*/h,/*Node*/parent){
 		var node = createNS("svg"); 
 		w && attr(node,"width", w);
@@ -32,6 +38,9 @@ dojo.declare("drawboard.graphic.SVGGraphic",drawboard.graphic.Graphic,{
 		var node = this.anchor;
 		w && attr(node,"width", w);
 		h && attr(node,"height",h);
+	},
+	/*Boolean*/isGraphMark:function(/*String*/mark){
+		return markReg.test(mark);
 	},
 	/*Node|void*/drawPath:function(/*Array<{command:"",points:[CoordinateFormatter]|String}>*/coordinates,/*String*/style,/*boolean*/open){
 		var path = createNS("path"),d = [],ps;

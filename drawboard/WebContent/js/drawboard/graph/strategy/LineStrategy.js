@@ -21,10 +21,10 @@ dojo.declare("drawboard.graph.strategy.LineStrategy",drawboard.graph.strategy.Gr
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawLine(cache[0],cache[1],this.getStyle(gp,runtime));
+		return gf.drawLine(cache[0],cache[1],this.getStyle(gp,runtime));
 	},
 	
 	/**
@@ -72,6 +72,13 @@ dojo.declare("drawboard.graph.strategy.LineStrategy",drawboard.graph.strategy.Gr
 	 * fetch the motion anchors' coordinate,will be call by the controller
 	 */
 	/*Array<CoordinateFormatter>*/getMotionAnchorCoordinates:function(/*GraphProxy*/gp,/*ExecuteRuntime*/runtime){
+		return null;
+	},
+
+	/**
+	 * fetch the marks' coordinate,will be call by the controller
+	 */
+	/*Array<CoordinateFormatter>*/getMarkCoordinates:function(/*GraphProxy*/gp,/*ExecuteRuntime*/runtime){
 		return null;
 	}
 });

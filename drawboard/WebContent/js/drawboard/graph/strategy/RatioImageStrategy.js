@@ -33,7 +33,7 @@ dojo.declare("drawboard.graph.strategy.RatioImageStrategy",drawboard.graph.strat
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			rotator = gp.getGraphRotator(runtime),
 			a = rotator.angle,
@@ -42,7 +42,7 @@ dojo.declare("drawboard.graph.strategy.RatioImageStrategy",drawboard.graph.strat
 			             "rotate(" + a + ")",
 			             "translate(" + -pole.x + "," + -pole.y  + ")"];
 		gp.getGraphCoordinates(runtime);
-		gf.drawImage(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),gp.getUrl(),(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
+		return gf.drawImage(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),gp.getUrl(),(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
 	}
 });
 })();

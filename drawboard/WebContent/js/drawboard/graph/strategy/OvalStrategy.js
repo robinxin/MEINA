@@ -14,7 +14,7 @@ dojo.declare("drawboard.graph.strategy.OvalStrategy",drawboard.graph.strategy.Re
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var cache = gp.getGraphCoordinates(runtime),
 			w = gp.getWidth(runtime),
 			h = gp.getHeight(runtime),
@@ -26,7 +26,7 @@ dojo.declare("drawboard.graph.strategy.OvalStrategy",drawboard.graph.strategy.Re
 			transform = ["translate(" + pole.x + "," + pole.y  + ")",
 			             "rotate(" + a + ")",
 			             "translate(" + -pole.x + "," + -pole.y  + ")"];
-		gf.drawEllipse(gp.getCoordinate(runtime),w,h,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
+		return gf.drawEllipse(gp.getCoordinate(runtime),w,h,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
 	},
 	
 	/**

@@ -1,6 +1,7 @@
 //interface of the graphic to draw kinds of graphs.
 dojo.provide("drawboard.graphic.Graphic");
 dojo.declare("drawboard.graphic.Graphic",null,{
+	/*Constant*/getType:function(){return this.type;},
 	/*Node*/createAnchor:function(/*Double*/w,/*Double*/h,/*Node*/parent){},
 	/*boolean*/ready:function(){return true},
 	/*Node|void*/setStyle:function(/*String*/style){},

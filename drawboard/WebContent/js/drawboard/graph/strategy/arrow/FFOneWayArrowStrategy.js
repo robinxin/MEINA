@@ -33,10 +33,10 @@ dojo.declare("drawboard.graph.strategy.arrow.FFOneWayArrowStrategy",drawboard.gr
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//array header
 					{command:p.MOVE,points:cache[0]},
 					//on the left size of array header

@@ -1,5 +1,9 @@
 dojo.provide("drawboard.Constant");
 drawboard.Constant = {
+	GraphicType:{
+		SVG: 0,
+		VML: 1
+	},
 	MouseAction:{
 		NONE:0,
 		MOUSEDOWN:1,
@@ -63,7 +67,10 @@ drawboard.Constant = {
 		ARC:"A",
 		RARC:"a",
 		CLOSE:"Z",
-		RCLOSE:"z"
+		RCLOSE:"z",
+		ARCVML:"ar",		//for vml
+		CLOCKWISEARCVML: "wr",
+		QUADRATICVML:"qb"
 	},
 	Command:{
 		CREATEVSDELETECOMMAND:"createvsdelete",

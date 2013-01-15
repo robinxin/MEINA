@@ -17,12 +17,12 @@ dojo.declare("drawboard.graph.strategy.CircleStrategy",drawboard.graph.strategy.
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var cache = gp.getGraphCoordinates(runtime),
 			w = gp.getWidth(runtime),
 			h = gp.getHeight(runtime),
 			r = w > h?h>>1:w>>1;
-		gf.drawCircle(cache[0],r,this.getStyle(gp,runtime));
+		return gf.drawCircle(cache[0],r,this.getStyle(gp,runtime));
 	},
 	
 	/**

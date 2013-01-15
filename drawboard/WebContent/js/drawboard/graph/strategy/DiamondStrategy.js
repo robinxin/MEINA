@@ -13,10 +13,10 @@ dojo.declare("drawboard.graph.strategy.DiamondStrategy",drawboard.graph.strategy
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//in the middle of northern
 					{command:p.MOVE,points:cache[0]},
 					//in the middle of western

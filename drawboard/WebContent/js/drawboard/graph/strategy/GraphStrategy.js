@@ -43,7 +43,7 @@ dojo.declare("drawboard.graph.strategy.GraphStrategy",null,{
 	/**
 	 * draw graph content on shown
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		//override by subclass
 	},
 	/**

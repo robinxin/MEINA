@@ -1,5 +1,6 @@
 dojo.provide("drawboard.graph.decorate.Decorator");
 dojo.require("dijit._Widget");
+dojo.require("drawboard.graph.strategy.GraphStrategyFactory");
 dojo.declare("drawboard.graph.decorate.Decorator",dijit._Widget,{
 	/*Constant*/_type:null,
 	/*Array<DecorateCoordinateFormatter>*/coordinate:null,
@@ -47,6 +48,10 @@ dojo.declare("drawboard.graph.decorate.Decorator",dijit._Widget,{
 		//override by subclass
 	},
 	
+	/*GraphStrategy*/getGraphStrategy: function(/*String*/strategy){
+		return drawboard.GraphStrategyFactory.getGraphStrategy(strategy);
+	},
+
 	/**
 	 * whether or not the two decorate are same
 	 */

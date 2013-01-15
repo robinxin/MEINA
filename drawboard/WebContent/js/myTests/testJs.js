@@ -4,8 +4,7 @@ dojo.require("drawboard.DrawBoard");
 dojo.require("drawboard.ZoomDrawBoard");
 dojo.require("common.utils.BrowerUtils");
 dojo.require("drawboard.graphic.SVGGraphic");
-dojo.require("drawboard.graphic.SVGIEGraphic");
-//dojo.require("drawboard.graphic.VMLGraphic");
+dojo.require("drawboard.graphic.VMLGraphic");
 (function(){
 var geometry = common.calc.Geometry,
 	rotate = geometry.rotation;
@@ -21,15 +20,15 @@ myTests.testJs = {
 		if(version){
 			version = version.substr(0,1);
 			if(version == "8" || version == "7" || version == "6" || version == "5"){
-				graphicClass = drawboard.graphic.SVGIEGraphic;
+				graphicClass = drawboard.graphic.VMLGraphic;
 			}
 		}
         this.graphic = new graphicClass();
 		var box = common.utils.BrowerUtils.getWindowBox(),
 			graphContainer,dbToolbar,db;
-		dojo.byId("graphNode").style.width = (box.w - 192) + "px";
+		dojo.byId("graphNode").style.width = (box.w - 212) + "px";
 		dojo.byId("graphNode").style.height = (box.h - 30) + "px";
-		graphContainer = new window.widget.GraphChooseContainer({width:"192px",height:(box.h - 30) + "px"},dojo.create("div",null,dojo.byId("toolsNode")));
+		graphContainer = new window.widget.GraphChooseContainer({width:"212px",height:(box.h - 30) + "px"},dojo.create("div",null,dojo.byId("toolsNode")));
 		dbToolbar = new window.widget.Toolbar({},dojo.create("div",null,dojo.byId("navigator")));
 		db = this.db = this.createDrawboard();
 		graphContainer.setDrawboard(db);
@@ -48,10 +47,10 @@ myTests.testJs = {
 		//this.getZoomWindow();
 		//this.testDrawImage();
 		//this.testDrawStrategyWithParams("drawboard.graph.strategy.TextStrategy",{"_text":"hellow"});
-		//this.testDrawStrategy("drawboard.graph.strategy.BrokenLineStrategy");
-		//this.testDrawStrategy("drawboard.graph.strategy.LineStrategy");
-		//this.testDrawStrategy("drawboard.graph.strategy.CircleStrategy");
-		//this.testDrawStrategy("drawboard.graph.strategy.OvalStrategy");
+		// this.testDrawStrategy("drawboard.graph.strategy.BrokenLineStrategy");
+		// this.testDrawStrategy("drawboard.graph.strategy.LineStrategy");
+		// this.testDrawStrategy("drawboard.graph.strategy.CircleStrategy");
+		// this.testDrawStrategy("drawboard.graph.strategy.OvalStrategy");
 		//this.testDrawStrategy("drawboard.graph.strategy.electricity.AmplifierStrategy");
 		//this.testDrawStrategy("drawboard.graph.strategy.electricity.ResistanceStrategy");
 		//this.testDrawStrategy("drawboard.graph.strategy.electricity.TriphaseStrategy");
@@ -60,7 +59,7 @@ myTests.testJs = {
 		//this.testDrawStrategy("drawboard.graph.strategy.arrow.FFDoubleSideArrowStrategy");
 		//this.testDrawStrategy("drawboard.graph.strategy.arrow.FFOneWayArrowStrategy");
 		//this.testDrawStrategy("drawboard.graph.strategy.SquareStrategy");
-		//this.testDrawStrategy("drawboard.graph.strategy.RectangleStrategy");
+		// this.testDrawStrategy("drawboard.graph.strategy.RectangleStrategy");
 		//this.testDrawStrategy("drawboard.graph.strategy.RounderRectangleStrategy");
 		//this.testDrawStrategy("drawboard.graph.strategy.polygon.PentagonStrategy");
 		//this.testDrawStrategy("drawboard.graph.strategy.polygon.HexagonStrategy");
@@ -76,10 +75,10 @@ myTests.testJs = {
 			fixNode = document.getElementById("graphNode");
 		if(!db){
 			div = dojo.create("div",{},dojo.byId("graphNode"));
-			div.style.width = box.w - 191 + "px";
+			div.style.width = box.w - 212 + "px";
 			div.style.height = box.h - 39 + "px";
 			div.style.border = "1px solid black";
-			this.db = new drawboard.DrawBoard({w:(box.w - 191),h:(box.h - 39),graphicClass:drawboard.graphic.SVGIEGraphic,_graphic:this.graphic,fixNode:fixNode},dojo.create("div",null,div));
+			this.db = new drawboard.DrawBoard({w:(box.w - 212),h:(box.h - 39),graphicClass:drawboard.graphic.SVGIEGraphic,_graphic:this.graphic,fixNode:fixNode},dojo.create("div",null,div));
 		}
 		return this.db;
 	},
@@ -106,7 +105,7 @@ myTests.testJs = {
 		dojo.require(strategy);
 		var db = this.createDrawboard(),
 			gs;
-		gs = new drawboard.graph.GraphStatus({_coordinate:{x:445,y:185},_w:100,_h:100});
+		gs = new drawboard.graph.GraphStatus({_coordinate:{x:10,y:10},_w:100,_h:100});
 		db.addGraph(gs,strategy);
 		db.draw();
 	},
@@ -134,9 +133,9 @@ myTests.testJs = {
 		var box = common.utils.BrowerUtils.getWindowBox(),
 			db = this.createDrawboard();
 		
-		dojo.byId("graphNode").style.width = (box.w - 192) + "px";
+		dojo.byId("graphNode").style.width = (box.w - 212) + "px";
 		dojo.byId("graphNode").style.height = (box.h - 30) + "px";
-		new window.widget.GraphChooseContainer({width:"192px",height:(box.h - 30) + "px",drawboard:db},dojo.create("div",null,dojo.byId("toolsNode")));
+		new window.widget.GraphChooseContainer({width:"212px",height:(box.h - 30) + "px",drawboard:db},dojo.create("div",null,dojo.byId("toolsNode")));
 		new window.widget.Toolbar({drawboard:db},dojo.create("div",null,dojo.byId("navigator")));
 		
 		/**

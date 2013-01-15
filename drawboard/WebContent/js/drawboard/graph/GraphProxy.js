@@ -452,7 +452,8 @@ dojo.declare("drawboard.graph.GraphProxy",null,{
 	 * draw the graph
 	 */
 	/*void*/draw:function(/*ExecuteRuntime*/runtime){
-		this.getGraphStrategy().draw(this,runtime.getGraphic(),runtime);
+		var node = this.getGraphStrategy().draw(this,runtime.getGraphic(),runtime);
+		node.setAttribute('id', this.getIdty());
 		if(this.isActived()){
 			var p = drawboard.Constant.Path,
 				cache = this.getOutletCoordinates(runtime);
@@ -464,7 +465,9 @@ dojo.declare("drawboard.graph.GraphProxy",null,{
 					//east south corner
 					{command:p.LINE,points:cache[2]},
 					//west south corner
-					{command:p.LINE,points:cache[3]}
+					{command:p.LINE,points:cache[3]},
+					//west north corner
+					{command:p.LINE,points:cache[0]}
 		            ],"fill:none;stroke:red;stroke-width:2");
 		}
 	},
@@ -565,7 +568,7 @@ dojo.declare("drawboard.graph.GraphProxy",null,{
 	/*void*/moveMotionAnchor:function(/*MotionAnchor*/anchor,/*CoordinateFormatter*/point,/*ExecuteRuntime*/runtime){
 		var motionAnchor = this.getGraphStrategy().calcMotionAnchor(this,anchor,point,runtime),
 			motionAnchors = this.getRealMotionAnchors(runtime);
-		(anchor.getIndex() < motionAnchors.length) && (motionAnchor != null) &&(motionAnchors[anchor.getIndex()] = motionAnchor);
+		motionAnchors && (anchor.getIndex() < motionAnchors.length) && (motionAnchor != null) &&(motionAnchors[anchor.getIndex()] = motionAnchor);
 		this.refresh(runtime);
 	},
 	/*GraphProxy*/active:function(/*CoordinateFormatter*/p,/*ExecuteRuntime*/runtime){

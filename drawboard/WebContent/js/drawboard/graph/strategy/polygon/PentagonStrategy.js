@@ -39,10 +39,10 @@ dojo.declare("drawboard.graph.strategy.polygon.PentagonStrategy",drawboard.graph
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 						//first in the western of north size
 						{command:p.MOVE,points:cache[0]},
 						//two

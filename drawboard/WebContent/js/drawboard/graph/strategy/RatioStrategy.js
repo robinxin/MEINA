@@ -13,7 +13,7 @@ dojo.declare("drawboard.graph.strategy.RatioStrategy",drawboard.graph.strategy.G
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		//must be override by subclass
 	},
 	/**

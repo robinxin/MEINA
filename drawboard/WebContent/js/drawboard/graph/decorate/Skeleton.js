@@ -1,6 +1,7 @@
 dojo.provide("drawboard.graph.decorate.Skeleton");
 dojo.require("drawboard.Constant");
 dojo.require("drawboard.graph.decorate.Decorator");
+dojo.require("drawboard.graph.strategy.RectangleStrategy");
 (function(){
 var constant = drawboard.Constant;
 dojo.declare("drawboard.graph.decorate.Skeleton",drawboard.graph.decorate.Decorator,{
@@ -64,7 +65,8 @@ dojo.declare("drawboard.graph.decorate.Skeleton",drawboard.graph.decorate.Decora
 			        {command:path.MOVE,points:p[0]},
 			        {command:path.LINE,points:p[1]},
 			        {command:path.LINE,points:p[2]},
-			        {command:path.LINE,points:p[3]}
+			        {command:path.LINE,points:p[3]},
+					{command:path.LINE,points:p[0]}
 			        ];
 		gp.drawPath(paths,style);
 	}

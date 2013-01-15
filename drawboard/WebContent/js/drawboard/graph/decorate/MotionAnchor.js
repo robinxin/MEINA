@@ -15,7 +15,8 @@ dojo.declare("drawboard.graph.decorate.MotionAnchor",drawboard.graph.decorate.De
 			        {command:path.MOVE,points:p[0]},
 			        {command:path.LINE,points:p[1]},
 			        {command:path.LINE,points:p[2]},
-			        {command:path.LINE,points:p[3]}
+			        {command:path.LINE,points:p[3]},
+			        {command:path.LINE,points:p[0]}
 			        ];
 		gp.drawPath(paths,style);
 	}

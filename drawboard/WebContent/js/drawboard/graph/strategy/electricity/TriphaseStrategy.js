@@ -21,15 +21,16 @@ dojo.declare("drawboard.graph.strategy.electricity.TriphaseStrategy",drawboard.g
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime),
 			style = this.getStyle(gp,runtime),
 			w = gp.getWidth(runtime),
-			r = w>>2;
-		gf.drawCircle(cache[0],r,style);
-		gf.drawCircle(cache[1],r,style);
-		gf.drawCircle(cache[2],r,style);
+			r = w>>2, l = [];
+		l.push(gf.drawCircle(cache[0],r,style));
+		l.push(gf.drawCircle(cache[1],r,style));
+		l.push(gf.drawCircle(cache[2],r,style));
+		return l;
 	},
 	/**
 	 * calculate the graph' coordinate

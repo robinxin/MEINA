@@ -20,10 +20,10 @@ dojo.declare("drawboard.graph.strategy.electricity.CapacitanceStrategy",drawboar
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//west
 					{command:p.MOVE,points:cache[0]},
 					//in the middle of the western part

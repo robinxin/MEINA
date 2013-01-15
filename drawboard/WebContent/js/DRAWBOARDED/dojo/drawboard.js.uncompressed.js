@@ -58,6 +58,7 @@ dojo._hasResource["drawboard.graphic.Graphic"] = true;
 //interface of the graphic to draw kinds of graphs.
 dojo.provide("drawboard.graphic.Graphic");
 dojo.declare("drawboard.graphic.Graphic",null,{
+	/*Constant*/getType:function(){return this.type;},
 	/*Node*/createAnchor:function(/*Double*/w,/*Double*/h,/*Node*/parent){},
 	/*boolean*/ready:function(){return true},
 	/*Node|void*/setStyle:function(/*String*/style){},
@@ -74,6 +75,106 @@ dojo.declare("drawboard.graphic.Graphic",null,{
 
 }
 
+if(!dojo._hasResource["drawboard.Constant"]){ //_hasResource checks added by build. Do not use _hasResource directly in your code.
+dojo._hasResource["drawboard.Constant"] = true;
+dojo.provide("drawboard.Constant");
+drawboard.Constant = {
+	GraphicType:{
+		SVG: 0,
+		VML: 1
+	},
+	MouseAction:{
+		NONE:0,
+		MOUSEDOWN:1,
+		MOUSEMOVE:2,
+		MOUSEUP:3,
+		MOUSEOVER:4,
+		MOUSECLICK:5,
+		MOUSEOUT:6
+	},
+	ActionStatus:{
+		NONE:0,
+		SELECTING:1,
+		DRAWING:2,
+		MOVING:3,
+		MARKING:4,
+		RESIZING:5,
+		ROTATING:6,
+		POLEMOVING:7,
+		MOTION:8,
+		TEXT:9
+	},
+	Decorate:{
+		SKELETON:0,
+		MARK:1,
+		ROTATOR:2,
+		MOTIONANCHOR:3,
+		CHARACTER:4,
+		Graph:5,
+		CENTER:6,
+		OUTLET:7
+	},
+	Direction:{
+		EAST:0,
+		EASTNORTH:1,
+		NORTH:2,
+		WESTNORTH:3,
+		WEST:4,
+		WESTSOUTH:5,
+		SOUTH:6,
+		EASTSOUTH:7,
+		END:8
+	},
+	Path:{
+		NONE:"",
+		MOVE:"M",
+		RMOVE:"m",		//R present relative
+		LINE:"L",
+		RLINE:"l",
+		HORIZON:"H",	//present horizontal line without y coordinate
+		RHORIZON:"h",
+		VERTICAL:"V",	//present vertical line without x coordinate
+		RVERTICAL:"v",
+		CUBIC:"C",		
+		RCUBIC:"c",
+		CUBICSMOOTH:"S",
+		CUBICRSMOOTH:"s",
+		QUADRATIC:"Q",
+		RQUADRATIC:"q",
+		QUADRATICSMOOTH:"T",
+		RQUADRATICSMOOTH:"t",
+		ARC:"A",
+		RARC:"a",
+		CLOSE:"Z",
+		RCLOSE:"z",
+		ARCVML:"ar",		//for vml
+		CLOCKWISEARCVML: "wr",
+		QUADRATICVML:"qb"
+	},
+	Command:{
+		CREATEVSDELETECOMMAND:"createvsdelete",
+		RESIZECOMMAND:"resize",
+		MOVECOMMAND:"move",
+		ROTATECOMMAND:"rotate",
+		ZOOMCOMMAND:"zoom",
+		STYLECOMMAND:"style",
+		ADDVSDELTECONSTRAINCOMMAND:"addvsdeleteconstrain",
+		COMBINEVSDEVIDEDCOMMAND:"combinevsdevided",
+		COMPOSITECOMMAND:"composite",
+		MOTIONCOMMAND:"motion"
+	},
+	Symbol:{
+		concat:"&&"
+	},
+	Toolbar:{
+		COLORPALETTE:0,
+		DROPDOWNLIST:1,
+		DIALOGUE:2
+	}
+};
+
+}
+
 if(!dojo._hasResource["drawboard.graphic.SVGGraphic"]){ //_hasResource checks added by build. Do not use _hasResource directly in your code.
 dojo._hasResource["drawboard.graphic.SVGGraphic"] = true;
 /**
@@ -83,10 +184,12 @@ dojo._hasResource["drawboard.graphic.SVGGraphic"] = true;
 dojo.provide("drawboard.graphic.SVGGraphic");
 
 
+
 (function(){
 var svgNS = "http://www.w3.org/2000/svg",
 	xlinkNS="http://www.w3.org/1999/xlink",
 	attr = dojo.attr,
+	constant = drawboard.Constant,
 	pathName = window.location.pathname,
 	rootName = pathName.substring(0, pathName.indexOf("/",1) + 1),
 	/*void*/attrNS = function(/*Node*/node,/*String*/ns,/*String*/attribute,/*String*/value){
@@ -95,9 +198,13 @@ var svgNS = "http://www.w3.org/2000/svg",
 	/*Node*/createNS = function(/*String*/ele){
 		return document.createElementNS?document.createElementNS(svgNS,ele):document.createElement(ele);
 	},
-	utils = common.utils.BrowerUtils;
+	utils = common.utils.BrowerUtils,
+	markReg = new RegExp("(path|image|rect|ellipse|line|test)",'ig');
+markReg.compile();
 dojo.declare("drawboard.graphic.SVGGraphic",drawboard.graphic.Graphic,{
 	/*Node*/anchor:null,
+	/*Constant*/type: constant.GraphicType.SVG,
+	
 	/*Node*/createAnchor:function(/*Double*/w,/*Double*/h,/*Node*/parent){
 		var node = createNS("svg"); 
 		w && attr(node,"width", w);
@@ -110,6 +217,9 @@ dojo.declare("drawboard.graphic.SVGGraphic",drawboard.graphic.Graphic,{
 		var node = this.anchor;
 		w && attr(node,"width", w);
 		h && attr(node,"height",h);
+	},
+	/*Boolean*/isGraphMark:function(/*String*/mark){
+		return markReg.test(mark);
 	},
 	/*Node|void*/drawPath:function(/*Array<{command:"",points:[CoordinateFormatter]|String}>*/coordinates,/*String*/style,/*boolean*/open){
 		var path = createNS("path"),d = [],ps;
@@ -448,96 +558,195 @@ dojo.declare("drawboard.graphic.SVGIEGraphic",drawboard.graphic.Graphic,{
 
 }
 
-if(!dojo._hasResource["drawboard.Constant"]){ //_hasResource checks added by build. Do not use _hasResource directly in your code.
-dojo._hasResource["drawboard.Constant"] = true;
-dojo.provide("drawboard.Constant");
-drawboard.Constant = {
-	MouseAction:{
-		NONE:0,
-		MOUSEDOWN:1,
-		MOUSEMOVE:2,
-		MOUSEUP:3,
-		MOUSEOVER:4,
-		MOUSECLICK:5,
-		MOUSEOUT:6
+if(!dojo._hasResource["drawboard.graphic.VMLGraphic"]){ //_hasResource checks added by build. Do not use _hasResource directly in your code.
+dojo._hasResource["drawboard.graphic.VMLGraphic"] = true;
+/**
+ * draw kinds of graphs by SVG
+ * style formatter : fill:none;stroke:(color);stroke-width:(double)
+ */
+dojo.provide("drawboard.graphic.VMLGraphic");
+
+
+
+(function(){
+var attr = dojo.attr,
+	pathName = window.location.pathname,
+	constant = drawboard.Constant,
+	path = constant.Path,
+	rootName = pathName.substring(0, pathName.indexOf("/",1) + 1),
+	/*void*/attr = function(/*Node*/node,/*String*/attribute,/*String*/value){
+		try{
+			node[attribute] = value;
+		}catch(e){
+			node.setAttribute(attribute,value);
+		}
 	},
-	ActionStatus:{
-		NONE:0,
-		SELECTING:1,
-		DRAWING:2,
-		MOVING:3,
-		MARKING:4,
-		RESIZING:5,
-		ROTATING:6,
-		POLEMOVING:7,
-		MOTION:8,
-		TEXT:9
+	/*Node*/createNode = function(/*String*/ele){
+		return document.createElement(ele);
 	},
-	Decorate:{
-		SKELETON:0,
-		MARK:1,
-		ROTATOR:2,
-		MOTIONANCHOR:3,
-		CHARACTER:4,
-		Graph:5,
-		CENTER:6,
-		OUTLET:7
+	utils = common.utils.BrowerUtils,
+	markReg = new RegExp("(shape|image|rect|roundrect|oval|line|test)",'ig');
+markReg.compile();
+dojo.declare("drawboard.graphic.VMLGraphic",drawboard.graphic.Graphic,{
+	/*Node*/anchor:null,
+	/*Constant*/type: constant.GraphicType.VML,
+
+	/*Node*/createAnchor:function(/*Double*/w,/*Double*/h,/*Node*/parent){
+		var node = createNode("div"),style = ["position:relative"];
+		w && style.push("width:" + w);
+		h && style.push("height:" + h);
+		(style.length > 0) && attr(node,"style", style.join(";"));
+		this.anchor = node;
+		parent.appendChild(node);
+		return node;
 	},
-	Direction:{
-		EAST:0,
-		EASTNORTH:1,
-		NORTH:2,
-		WESTNORTH:3,
-		WEST:4,
-		WESTSOUTH:5,
-		SOUTH:6,
-		EASTSOUTH:7,
-		END:8
+	/*Boolean*/isGraphMark:function(/*String*/mark){
+		return markReg.test(mark);
 	},
-	Path:{
-		NONE:"",
-		MOVE:"M",
-		RMOVE:"m",		//R present relative
-		LINE:"L",
-		RLINE:"l",
-		HORIZON:"H",	//present horizontal line without y coordinate
-		RHORIZON:"h",
-		VERTICAL:"V",	//present vertical line without x coordinate
-		RVERTICAL:"v",
-		CUBIC:"C",		
-		RCUBIC:"c",
-		CUBICSMOOTH:"S",
-		CUBICRSMOOTH:"s",
-		QUADRATIC:"Q",
-		RQUADRATIC:"q",
-		QUADRATICSMOOTH:"T",
-		RQUADRATICSMOOTH:"t",
-		ARC:"A",
-		RARC:"a",
-		CLOSE:"Z",
-		RCLOSE:"z"
+	/*void*/styleAdapte: function(/*Node*/node,/*String*/style){
+		style = style.split(";");
+		var kv;
+		for(var i = 0;i < style.length;i++){
+			kv = style[i].split(":");
+			switch(kv[0]){
+				case 'fill':
+					if(kv[1] != 'none'){
+						attr(node, 'filled', 't');
+						attr(node, 'fillcolor',kv[1]);
+					}else{
+						attr(node, 'filled', 'f');
+					}
+					break;
+				case 'stroke':
+					attr(node, 'strokecolor', kv[1]);
+					break;
+				case 'stroke-width':
+					attr(node, 'strokeweight', kv[1]);
+					break;
+			}
+		}
 	},
-	Command:{
-		CREATEVSDELETECOMMAND:"createvsdelete",
-		RESIZECOMMAND:"resize",
-		MOVECOMMAND:"move",
-		ROTATECOMMAND:"rotate",
-		ZOOMCOMMAND:"zoom",
-		STYLECOMMAND:"style",
-		ADDVSDELTECONSTRAINCOMMAND:"addvsdeleteconstrain",
-		COMBINEVSDEVIDEDCOMMAND:"combinevsdevided",
-		COMPOSITECOMMAND:"composite",
-		MOTIONCOMMAND:"motion"
+	/*String*/commandAdapte:function(command){
+		var c = command;
+		switch(command){
+			case path.QUADRATIC:
+			case path.RQUADRATIC:
+				c = path.QUADRATICVML;
+				break;
+		}
+		return c;
 	},
-	Symbol:{
-		concat:"&&"
+	/*void*/setSize:function(/*Double*/w,/*Double*/h){
+		var node = this.anchor,style = [];
+		w && style.push("width:" + w);
+		h && style.push("height:" + h);
+		(style.length > 0) && attr(node,"style", style.join(";"));
 	},
-	Toolbar:{
-		COLORPALETTE:0,
-		DROPDOWNLIST:1,
-		DIALOGUE:2
+	/*Node|void*/drawPath:function(/*Array<{command:"",points:[CoordinateFormatter]|String}>*/coordinates,/*String*/style,/*boolean*/open){
+		var path,d = [], ps;
+		dojo.forEach(coordinates,function(item){
+			if(!item){return;}
+			if(typeof item == "string"){
+				this.push(item);
+			}else{
+				this.push(item.command);
+				ps = item.points;
+				(!dojo.isArray(ps)) && (ps = [ps]);
+				dojo.forEach(ps,function(p){
+					this.push((~~p.x || 0) + " " + (~~p.y || 0));
+				},this);
+			}
+		},d);
+		!open && d.push(" x");
+		d.push(" e");
+		//coordsize:{cx,cy} 是将width和height划分成cx和cy份，如果有px值，将忽略px.coordorigin定义坐标源点
+		path = createNode("<v:shape style='width:1;height:1;position:absolute;' CoordSize='1,1'></v:shape>");
+		attr(path,"path",d.join(""));
+		this.styleAdapte(path, style);
+		this.anchor.appendChild(path);
+		return path;
+	},
+	/*Node|void*/drawCircle:function(/*CoordinateFormatter*/coordinate,/*Double*/r,/*String*/style){
+		var s=["position:absolute","left:" + (coordinate.x - r),"top:" + (coordinate.y - r),"width:" + (r<<1),"height:" + (r<<1)],
+			circle = createNode("<v:oval style='" + s.join(";") + "'></v:oval>");
+		this.anchor.appendChild(circle);
+		this.styleAdapte(circle, style);
+		return circle;
+	},
+	/*Node|void*/drawEllipse:function(/*CoordinateFormatter*/coordinate,/*Double*/w,/*Double*/h,/*Map*/attrs,/*String*/style){
+		var s=["position:absolute","left:" + coordinate.x, "top:" + coordinate.y, "width:" + w,"height:" + h], ellipse, transform = attrs.transform;
+		if(transform){
+			s.push(";rotation:" + transform[1].substr(7, transform[1].length - 2));
+		}
+		ellipse = createNode("<v:oval style='" + s.join(";") + "'></v:oval>");
+		this.styleAdapte(ellipse, style);
+		this.anchor.appendChild(ellipse);
+		return ellipse;
+	},
+	/*Node|void*/drawLine:function(/*CoordinateFormatter*/p1,/*CoordinateFormatter*/p2,/*String*/style){
+		var line = createNode("<v:line style='position:absolute'><v:line>");
+		attr(line,"from",p1.x + ',' + p1.y);
+		attr(line,"to",p2.x + ',' + p2.y);
+		this.anchor.appendChild(line);
+		return line;
+	},
+	/*Node|void*/drawRect:function(/*CoordinateFormatter*/coordinate,/*Double*/w,/*Double*/h,/*Double*/rx,/*Map*/attrs,/*String*/style){
+		var s=["position:absolute","left:" + coordinate.x,"top:" + coordinate.y,"width:" + w,"height:" + h], rect, transform = attrs.transform;
+		if(transform){
+			s.push(";rotation:" + transform[1].substr(7, transform[1].length - 2));
+		}
+		rect = (rx ===undefined)?createNode("<v:Rect style=" + s.join(";") + "></v:Rect>"):createNode("<v:RoundRect style=" + s.join(";") + "></v:RoundRect>");
+		this.styleAdapte(rect, style);
+		this.anchor.appendChild(rect);
+		return rect;
+	},
+	/*Node|void*/drawImage:function(/*CoordinateFormatter*/coordinate,/*Double*/w,/*Double*/h,/*String*/url,/*Map*/attrs){
+		var s=["position:absolute","left:" + coordinate.x,"top:" + coordinate.y,"width:" + w,"height:" + h], image, transform = attrs.transform;
+		if(transform){
+			s.push(";rotation:" + transform[1].substr(7, transform[1].length - 2));
+		}
+		image = createNode("<v:image src='" + url + "' style='" + s.join(";") + "' ></v:image>");
+		this.anchor.appendChild(image);
+		return image;
+	},
+	/*Node|void*/drawText:function(/*CoordinateFormatter*/coordinate,/*Double*/w,/*Double*/h,/*String*/textContent,/*Map*/attrs,/*String*/style){
+		var text = createNode("text"),
+			s = style,content,
+			texts = textContent && textContent.split("\n")
+			x = coordinate && coordinate.x + (w>>1),
+			y = coordinate && coordinate.y + (h>>1),
+			unitHeight = textContent && utils.getFontHeight(textContent,style);
+		x && attr(text,"x",x);
+		y && attr(text,"y",y);
+		attr(text,"width",w);
+		attr(text,"height",h);
+		if(attrs){
+			for(var item in attrs){
+				attr(text,item,attrs[item] instanceof Array?attrs[item].join(' '):attrs[item]);
+			}
+		}
+		s && (s.indexOf("text-anchor") == -1) && (s += ";text-anchor:middle;");
+		!s && (s = "text-anchor:middle;");
+		s && attr(text,"style",s);
+		texts && dojo.forEach(texts,function(t,index){
+			content = createNode("tspan");
+			attr(content,"x",x);
+			attr(content,"y",y + unitHeight * index);
+			content.textContent = t;
+			text.appendChild(content);
+		},this);
+		this.anchor.appendChild(text);
+		return text;
+	},
+	/*void*/clear:function(){
+		var anchor = this.anchor;
+		while(anchor.lastChild) 
+		{
+			anchor.removeChild(anchor.lastChild);
+		}
 	}
-};
+});
+})();
 
 }
 
@@ -588,7 +797,7 @@ dojo.declare("drawboard.graph.strategy.GraphStrategy",null,{
 	/**
 	 * draw graph content on shown
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		//override by subclass
 	},
 	/**
@@ -773,10 +982,10 @@ dojo.declare("drawboard.graph.strategy.RectangleStrategy",drawboard.graph.strate
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//west north corner
 					{command:p.MOVE,points:cache[0]},
 					//east north corner
@@ -784,7 +993,9 @@ dojo.declare("drawboard.graph.strategy.RectangleStrategy",drawboard.graph.strate
 					//east south corner
 					{command:p.LINE,points:cache[2]},
 					//west south corner
-					{command:p.LINE,points:cache[3]}
+					{command:p.LINE,points:cache[3]},
+					//west north corner
+					{command:p.LINE,points:cache[0]}
 		            ],this.getStyle(gp,runtime));
 	},
 	/**
@@ -823,7 +1034,7 @@ dojo.declare("drawboard.graph.strategy.TextStrategy",drawboard.graph.strategy.Re
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			rotator = gp.getGraphRotator(runtime),
 			a = rotator.angle,
@@ -831,7 +1042,7 @@ dojo.declare("drawboard.graph.strategy.TextStrategy",drawboard.graph.strategy.Re
 			transform = ["translate(" + pole.x + "," + pole.y  + ")",
 			             "rotate(" + a + ")",
 			             "translate(" + -pole.x + "," + -pole.y  + ")"];
-		gf.drawText(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),gp.getText(),(a != 0)&&{transform:transform},this.getTextStyle(gp,runtime));
+		return gf.drawText(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),gp.getText(),(a != 0)&&{transform:transform},this.getTextStyle(gp,runtime));
 	},
 	/*String*/getTextStyle:function(/*GraphProxy*/gp,/*ExecuteRuntime*/runtime){
 		return this.getStyleController(runtime).getTextStyle(gp);
@@ -1027,14 +1238,14 @@ dojo.declare("drawboard.graph.strategy.BrokenLineStrategy",drawboard.graph.strat
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime),
 			max = cache.length - 1,path = [];
 		for(var i = 0;i < max;i++){
 			(i == 0)?path.push({command:p.MOVE,points:cache[i]},{command:p.LINE,points:cache[i+1]}): path.push({command:p.LINE,points:cache[i]},{command:p.LINE,points:cache[i+1]});
 		}
-		gf.drawPath(path,this.getStyle(gp,runtime),true);
+		return gf.drawPath(path,this.getStyle(gp,runtime),true);
 	},
 	
 	/**
@@ -1382,7 +1593,7 @@ dojo.declare("drawboard.graph.strategy.ImageStrategy",drawboard.graph.strategy.G
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			rotator = gp.getGraphRotator(runtime),
 			a = rotator.angle,
@@ -1390,7 +1601,7 @@ dojo.declare("drawboard.graph.strategy.ImageStrategy",drawboard.graph.strategy.G
 			transform = ["translate(" + pole.x + "," + pole.y  + ")",
 			             "rotate(" + a + ")",
 			             "translate(" + -pole.x + "," + -pole.y  + ")"];
-		gf.drawImage(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),gp.getUrl(),(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
+		return gf.drawImage(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),gp.getUrl(),(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
 	}
 });
 })();
@@ -1414,7 +1625,7 @@ dojo.declare("drawboard.graph.strategy.RatioStrategy",drawboard.graph.strategy.G
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		//must be override by subclass
 	},
 	/**
@@ -1557,7 +1768,7 @@ dojo.declare("drawboard.graph.strategy.RatioImageStrategy",drawboard.graph.strat
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			rotator = gp.getGraphRotator(runtime),
 			a = rotator.angle,
@@ -1566,7 +1777,7 @@ dojo.declare("drawboard.graph.strategy.RatioImageStrategy",drawboard.graph.strat
 			             "rotate(" + a + ")",
 			             "translate(" + -pole.x + "," + -pole.y  + ")"];
 		gp.getGraphCoordinates(runtime);
-		gf.drawImage(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),gp.getUrl(),(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
+		return gf.drawImage(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),gp.getUrl(),(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
 	}
 });
 })();
@@ -1590,10 +1801,10 @@ dojo.declare("drawboard.graph.strategy.SquareStrategy",drawboard.graph.strategy.
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//west north corner
 					{command:p.MOVE,points:cache[0]},
 					//east north corner
@@ -1601,7 +1812,8 @@ dojo.declare("drawboard.graph.strategy.SquareStrategy",drawboard.graph.strategy.
 					//east south corner
 					{command:p.LINE,points:cache[2]},
 					//west south corner
-					{command:p.LINE,points:cache[3]}
+					{command:p.LINE,points:cache[3]},
+					{command:p.LINE,points:cache[0]}
 		            ],this.getStyle(gp,runtime));
 	},
 	/**
@@ -1716,7 +1928,7 @@ dojo.declare("drawboard.graph.strategy.OvalStrategy",drawboard.graph.strategy.Re
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var cache = gp.getGraphCoordinates(runtime),
 			w = gp.getWidth(runtime),
 			h = gp.getHeight(runtime),
@@ -1728,7 +1940,7 @@ dojo.declare("drawboard.graph.strategy.OvalStrategy",drawboard.graph.strategy.Re
 			transform = ["translate(" + pole.x + "," + pole.y  + ")",
 			             "rotate(" + a + ")",
 			             "translate(" + -pole.x + "," + -pole.y  + ")"];
-		gf.drawEllipse(gp.getCoordinate(runtime),w,h,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
+		return gf.drawEllipse(gp.getCoordinate(runtime),w,h,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
 	},
 	
 	/**
@@ -1768,12 +1980,12 @@ dojo.declare("drawboard.graph.strategy.CircleStrategy",drawboard.graph.strategy.
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var cache = gp.getGraphCoordinates(runtime),
 			w = gp.getWidth(runtime),
 			h = gp.getHeight(runtime),
 			r = w > h?h>>1:w>>1;
-		gf.drawCircle(cache[0],r,this.getStyle(gp,runtime));
+		return gf.drawCircle(cache[0],r,this.getStyle(gp,runtime));
 	},
 	
 	/**
@@ -1818,16 +2030,31 @@ dojo.declare("drawboard.graph.strategy.MotionCircleStrategy",drawboard.graph.str
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			w = gp.getWidth(runtime),
 			h = gp.getHeight(runtime),
-			r = w > h?h>>1:w>>1,
 			cache = gp.getGraphCoordinates(runtime),
 			motionAnchors = gp.getMotionAnchorCoordinates(runtime),
-			a = geometry.angle(motionAnchors[0][0],cache[0],motionAnchors[1][0]),
-			arc = [p.ARC + r,r,0,(a < 180?0:1) + ",1",motionAnchors[1][0].x + " " + motionAnchors[1][0].y];
-		gf.drawPath([
+			arc;
+		if(gf.getType() == constant.GraphicType.VML){
+			var coordinate = gp.getCoordinate(runtime), 
+				start = {x: w < 0 ? coordinate.x + w : coordinate.x, y: h < 0 ? coordinate.y + h : coordinate.y},
+				end = {x: w < 0 ? coordinate.x : coordinate.x + w, y: h < 0 ? coordinate.y : coordinate.y + h}
+				mstart = motionAnchors[0][0],
+				mend = motionAnchors[1][0];
+			//第二象限 wa 第四象限ar 
+			arc = ['wr', ~~start.x, ~~start.y, ~~end.x, ~~end.y, ~~mstart.x, ~~mstart.y, ~~mend.x, ~~mend.y];
+			return gf.drawPath([
+					//first motion anchor
+					{command:p.MOVE,points:motionAnchors[0][0]},
+					arc.join(" ")
+					],this.getStyle(gp,runtime),true);
+		}
+		var r = w > h?h>>1:w>>1,
+			a = geometry.angle(motionAnchors[0][0],cache[0],motionAnchors[1][0]);
+		arc = [p.ARC + r,r,0,(a < 180?0:1) + ",1",motionAnchors[1][0].x + " " + motionAnchors[1][0].y];
+		return gf.drawPath([
 					//first motion anchor
 					{command:p.MOVE,points:motionAnchors[0][0]},
 					arc.join(" ")
@@ -1931,7 +2158,7 @@ dojo.declare("drawboard.graph.strategy.RounderRectangleStrategy",drawboard.graph
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			rotator = gp.getGraphRotator(runtime),
 			a = rotator.angle,
@@ -1940,7 +2167,7 @@ dojo.declare("drawboard.graph.strategy.RounderRectangleStrategy",drawboard.graph
 			transform = ["translate(" + pole.x + "," + pole.y  + ")",
 			             "rotate(" + a + ")",
 			             "translate(" + -pole.x + "," + -pole.y  + ")"];
-		gf.drawRect(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),r,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
+		return gf.drawRect(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),r,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
 	}
 });
 })();
@@ -1958,7 +2185,7 @@ dojo.declare("drawboard.graph.strategy.RounderSquareStrategy",drawboard.graph.st
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			rotator = gp.getGraphRotator(runtime),
 			a = rotator.angle,
@@ -1971,7 +2198,7 @@ dojo.declare("drawboard.graph.strategy.RounderSquareStrategy",drawboard.graph.st
 			             "rotate(" + a + ")",
 			             "translate(" + -pole.x + "," + -pole.y  + ")"];
 		gp.getGraphCoordinates(runtime);
-		gf.drawRect(gp.getCoordinate(runtime),min,min,r,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
+		return gf.drawRect(gp.getCoordinate(runtime),min,min,r,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
 	}
 });
 })();
@@ -1995,10 +2222,10 @@ dojo.declare("drawboard.graph.strategy.TriangleStrategy",drawboard.graph.strateg
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//north corner
 					{command:p.MOVE,points:cache[0]},
 					//east south corner
@@ -2084,10 +2311,10 @@ dojo.declare("drawboard.graph.strategy.RightTriangleStrategy",drawboard.graph.st
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//west north corner
 					{command:p.MOVE,points:cache[0]},
 					//east south corner
@@ -2181,10 +2408,10 @@ dojo.declare("drawboard.graph.strategy.LineStrategy",drawboard.graph.strategy.Gr
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawLine(cache[0],cache[1],this.getStyle(gp,runtime));
+		return gf.drawLine(cache[0],cache[1],this.getStyle(gp,runtime));
 	},
 	
 	/**
@@ -2233,6 +2460,13 @@ dojo.declare("drawboard.graph.strategy.LineStrategy",drawboard.graph.strategy.Gr
 	 */
 	/*Array<CoordinateFormatter>*/getMotionAnchorCoordinates:function(/*GraphProxy*/gp,/*ExecuteRuntime*/runtime){
 		return null;
+	},
+
+	/**
+	 * fetch the marks' coordinate,will be call by the controller
+	 */
+	/*Array<CoordinateFormatter>*/getMarkCoordinates:function(/*GraphProxy*/gp,/*ExecuteRuntime*/runtime){
+		return null;
 	}
 });
 })();
@@ -2256,10 +2490,10 @@ dojo.declare("drawboard.graph.strategy.DiamondStrategy",drawboard.graph.strategy
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//in the middle of northern
 					{command:p.MOVE,points:cache[0]},
 					//in the middle of western
@@ -2332,10 +2566,10 @@ dojo.declare("drawboard.graph.strategy.arrow.FFOneWayArrowStrategy",drawboard.gr
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//array header
 					{command:p.MOVE,points:cache[0]},
 					//on the left size of array header
@@ -2510,10 +2744,10 @@ dojo.declare("drawboard.graph.strategy.arrow.FFDoubleSideArrowStrategy",drawboar
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//array header
 					{command:p.MOVE,points:cache[0]},
 					//on the left size of array header
@@ -3202,6 +3436,7 @@ dojo.provide("drawboard.PreRequire");
 
 
 
+
 }
 
 if(!dojo._hasResource["drawboard._Event"]){ //_hasResource checks added by build. Do not use _hasResource directly in your code.
@@ -3385,7 +3620,7 @@ dojo.declare("drawboard._Event",null,{
 			textBoard.show(entity);
 			this.setDrawType("drawboard.graph.strategy.TextStrategy");
 		}
-		this.getRuntime().getContext().getStyleCtrl().setActives(null);
+		runtime.getContext().getStyleCtrl().setActives(null);
 		this._start = null;
 		this._end = null;
 		this._marks = null;
@@ -3630,6 +3865,7 @@ if(!dojo._hasResource["drawboard.graph.decorate.Decorator"]){ //_hasResource che
 dojo._hasResource["drawboard.graph.decorate.Decorator"] = true;
 dojo.provide("drawboard.graph.decorate.Decorator");
 
+
 dojo.declare("drawboard.graph.decorate.Decorator",dijit._Widget,{
 	/*Constant*/_type:null,
 	/*Array<DecorateCoordinateFormatter>*/coordinate:null,
@@ -3677,6 +3913,10 @@ dojo.declare("drawboard.graph.decorate.Decorator",dijit._Widget,{
 		//override by subclass
 	},
 	
+	/*GraphStrategy*/getGraphStrategy: function(/*String*/strategy){
+		return drawboard.GraphStrategyFactory.getGraphStrategy(strategy);
+	},
+
 	/**
 	 * whether or not the two decorate are same
 	 */
@@ -4183,7 +4423,8 @@ dojo.declare("drawboard.graph.GraphProxy",null,{
 	 * draw the graph
 	 */
 	/*void*/draw:function(/*ExecuteRuntime*/runtime){
-		this.getGraphStrategy().draw(this,runtime.getGraphic(),runtime);
+		var node = this.getGraphStrategy().draw(this,runtime.getGraphic(),runtime);
+		node.setAttribute('id', this.getIdty());
 		if(this.isActived()){
 			var p = drawboard.Constant.Path,
 				cache = this.getOutletCoordinates(runtime);
@@ -4195,7 +4436,9 @@ dojo.declare("drawboard.graph.GraphProxy",null,{
 					//east south corner
 					{command:p.LINE,points:cache[2]},
 					//west south corner
-					{command:p.LINE,points:cache[3]}
+					{command:p.LINE,points:cache[3]},
+					//west north corner
+					{command:p.LINE,points:cache[0]}
 		            ],"fill:none;stroke:red;stroke-width:2");
 		}
 	},
@@ -4296,7 +4539,7 @@ dojo.declare("drawboard.graph.GraphProxy",null,{
 	/*void*/moveMotionAnchor:function(/*MotionAnchor*/anchor,/*CoordinateFormatter*/point,/*ExecuteRuntime*/runtime){
 		var motionAnchor = this.getGraphStrategy().calcMotionAnchor(this,anchor,point,runtime),
 			motionAnchors = this.getRealMotionAnchors(runtime);
-		(anchor.getIndex() < motionAnchors.length) && (motionAnchor != null) &&(motionAnchors[anchor.getIndex()] = motionAnchor);
+		motionAnchors && (anchor.getIndex() < motionAnchors.length) && (motionAnchor != null) &&(motionAnchors[anchor.getIndex()] = motionAnchor);
 		this.refresh(runtime);
 	},
 	/*GraphProxy*/active:function(/*CoordinateFormatter*/p,/*ExecuteRuntime*/runtime){
@@ -4960,7 +5203,10 @@ dojo.declare("drawboard._Selector",drawboard.container.LayoutContainer,{
 			setActive = dojo.hitch(runtime.getDrawProcessor(),"setActive"),
 			selectRect = this.getSelectRect(),
 			preActive = this.getActive(),
-			status = this._status;
+			graphic = this.getg
+			status = this._status,
+			graphic = runtime.getGraphic();
+			target = e.target;
 		this.setMouseStatus(mouseStatus.MOUSEDOWN);
 		if(status && status == actionStatus.TEXT){
 			return;
@@ -4971,6 +5217,16 @@ dojo.declare("drawboard._Selector",drawboard.container.LayoutContainer,{
 			return;
 		}
 		selectRect && (active = setActive(selectRect,point,this._isMark,markController,runtime));
+
+		if(!active && graphic.isGraphMark(target.tagName)){
+			//first focus the active graph
+			preActive && (active = setActive(preActive,point,this._isMark,markController,runtime));
+			(!active) && (idty = target.getAttribute("id")) && this.some(function(/*GraphProxy*/gp){
+				gp.getIdty() == idty && (active = {active:gp, decorate:null, status: actionStatus.MOVING});
+				if(active){return true;}
+			},this,true);
+			var idty;
+		}
 		//get the graph status information which contains the point
 		if(!active){
 			//first focus the active graph
@@ -5278,7 +5534,8 @@ dojo.declare("drawboard.graph.decorate.MotionAnchor",drawboard.graph.decorate.De
 			        {command:path.MOVE,points:p[0]},
 			        {command:path.LINE,points:p[1]},
 			        {command:path.LINE,points:p[2]},
-			        {command:path.LINE,points:p[3]}
+			        {command:path.LINE,points:p[3]},
+			        {command:path.LINE,points:p[0]}
 			        ];
 		gp.drawPath(paths,style);
 	}
@@ -5445,6 +5702,7 @@ dojo._hasResource["drawboard.graph.decorate.Skeleton"] = true;
 dojo.provide("drawboard.graph.decorate.Skeleton");
 
 
+
 (function(){
 var constant = drawboard.Constant;
 dojo.declare("drawboard.graph.decorate.Skeleton",drawboard.graph.decorate.Decorator,{
@@ -5508,7 +5766,8 @@ dojo.declare("drawboard.graph.decorate.Skeleton",drawboard.graph.decorate.Decora
 			        {command:path.MOVE,points:p[0]},
 			        {command:path.LINE,points:p[1]},
 			        {command:path.LINE,points:p[2]},
-			        {command:path.LINE,points:p[3]}
+			        {command:path.LINE,points:p[3]},
+					{command:path.LINE,points:p[0]}
 			        ];
 		gp.drawPath(paths,style);
 	}
@@ -6050,8 +6309,8 @@ dojo.declare("drawboard.DrawBoard",[dijit._Templated,drawboard._Selector,drawboa
 		this._textBoard = new this.textBoardClass({"_db":this});
 		this.domNode.appendChild(this._textBoard.domNode);
 		this._runtime = new drawboard.runtime.ExecuteRuntime({context:ctx,graphic:graphic});
-		drawboard.DrawBoard.superclass.postCreate.call(this,node);
-		//drawboard.DrawBoard.superclass.postCreate.call(this,this.domNode);
+		//drawboard.DrawBoard.superclass.postCreate.call(this,node);
+		drawboard.DrawBoard.superclass.postCreate.call(this,this.domNode);
 	},
 	/*boolean*/ready:function(){
 		return this.getGraphic().ready();
@@ -6269,7 +6528,6 @@ dojo.declare("drawboard.DrawBoard",[dijit._Templated,drawboard._Selector,drawboa
 		var selectRect = this.getSelectRect(),
 			drawEntity = this.getDrawEntity(),
 			runtime = this.getRuntime();
-		this.drawGraphs(runtime);
 		if(drawEntity){
 			var gs = new drawboard.graph.GraphStatus({_coordinate:{x:drawEntity.x,y:drawEntity.y},_w:drawEntity.width,_h:drawEntity.height}),
 				proxy = new drawboard.graph.GraphProxy(gs,this.getDrawType()||this.getSRGraphStrategyClass()),
@@ -6281,6 +6539,7 @@ dojo.declare("drawboard.DrawBoard",[dijit._Templated,drawboard._Selector,drawboa
 			runtime.draw(proxy);
 		}
 		selectRect && (runtime.draw(selectRect));
+		this.drawGraphs(runtime);
 		this.fireListener(["draw"]);
 	},
 	/**

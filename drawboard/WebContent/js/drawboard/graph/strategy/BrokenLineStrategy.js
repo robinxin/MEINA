@@ -46,14 +46,14 @@ dojo.declare("drawboard.graph.strategy.BrokenLineStrategy",drawboard.graph.strat
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime),
 			max = cache.length - 1,path = [];
 		for(var i = 0;i < max;i++){
 			(i == 0)?path.push({command:p.MOVE,points:cache[i]},{command:p.LINE,points:cache[i+1]}): path.push({command:p.LINE,points:cache[i]},{command:p.LINE,points:cache[i+1]});
 		}
-		gf.drawPath(path,this.getStyle(gp,runtime),true);
+		return gf.drawPath(path,this.getStyle(gp,runtime),true);
 	},
 	
 	/**

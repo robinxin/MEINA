@@ -24,7 +24,7 @@ dojo.declare("window.widget.Toolbar",[dijit._Widget,dijit._Templated],{
 						label:name,
 						title:name,
 						showLabel:true,
-						//iconClass: "dijitEditorIcon dijitEditorIcon toolbarIcon " + item.css[0],
+						// iconClass: "toolbarIcon ",
 						dropDown:new dijit.ColorPalette({
 							drawboard:that.drawboard,
 							palette:"7x10",

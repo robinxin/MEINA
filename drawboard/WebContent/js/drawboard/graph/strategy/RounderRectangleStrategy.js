@@ -35,7 +35,7 @@ dojo.declare("drawboard.graph.strategy.RounderRectangleStrategy",drawboard.graph
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			rotator = gp.getGraphRotator(runtime),
 			a = rotator.angle,
@@ -44,7 +44,7 @@ dojo.declare("drawboard.graph.strategy.RounderRectangleStrategy",drawboard.graph
 			transform = ["translate(" + pole.x + "," + pole.y  + ")",
 			             "rotate(" + a + ")",
 			             "translate(" + -pole.x + "," + -pole.y  + ")"];
-		gf.drawRect(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),r,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
+		return gf.drawRect(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),r,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
 	}
 });
 })();

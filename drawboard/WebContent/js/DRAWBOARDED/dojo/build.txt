@@ -96,9 +96,10 @@ common.js:
 drawboard.js:
 ./../../DRAWBOARDED/drawboard/board/TextBoard.js
 ./../../DRAWBOARDED/drawboard/graphic/Graphic.js
+./../../DRAWBOARDED/drawboard/Constant.js
 ./../../DRAWBOARDED/drawboard/graphic/SVGGraphic.js
 ./../../DRAWBOARDED/drawboard/graphic/SVGIEGraphic.js
-./../../DRAWBOARDED/drawboard/Constant.js
+./../../DRAWBOARDED/drawboard/graphic/VMLGraphic.js
 ./../../DRAWBOARDED/drawboard/graph/strategy/GraphStrategy.js
 ./../../DRAWBOARDED/drawboard/graph/strategy/RectangleStrategy.js
 ./../../DRAWBOARDED/drawboard/graph/strategy/TextStrategy.js

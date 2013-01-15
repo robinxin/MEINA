@@ -1,3 +1,14 @@
+.choosenUl{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	*zoom: 1;
+}
+.choosenUl li{
+	list-style: none;
+	float: left;
+}
 /******************************************************
  *					floorplan   					  *
  ******************************************************/

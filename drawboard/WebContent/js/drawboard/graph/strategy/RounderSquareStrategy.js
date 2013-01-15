@@ -7,7 +7,7 @@ dojo.declare("drawboard.graph.strategy.RounderSquareStrategy",drawboard.graph.st
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			rotator = gp.getGraphRotator(runtime),
 			a = rotator.angle,
@@ -20,7 +20,7 @@ dojo.declare("drawboard.graph.strategy.RounderSquareStrategy",drawboard.graph.st
 			             "rotate(" + a + ")",
 			             "translate(" + -pole.x + "," + -pole.y  + ")"];
 		gp.getGraphCoordinates(runtime);
-		gf.drawRect(gp.getCoordinate(runtime),min,min,r,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
+		return gf.drawRect(gp.getCoordinate(runtime),min,min,r,(a != 0)&&{transform:transform},this.getStyle(gp,runtime));
 	}
 });
 })();

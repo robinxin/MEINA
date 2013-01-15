@@ -18,16 +18,31 @@ dojo.declare("drawboard.graph.strategy.MotionCircleStrategy",drawboard.graph.str
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			w = gp.getWidth(runtime),
 			h = gp.getHeight(runtime),
-			r = w > h?h>>1:w>>1,
 			cache = gp.getGraphCoordinates(runtime),
 			motionAnchors = gp.getMotionAnchorCoordinates(runtime),
-			a = geometry.angle(motionAnchors[0][0],cache[0],motionAnchors[1][0]),
-			arc = [p.ARC + r,r,0,(a < 180?0:1) + ",1",motionAnchors[1][0].x + " " + motionAnchors[1][0].y];
-		gf.drawPath([
+			arc;
+		if(gf.getType() == constant.GraphicType.VML){
+			var coordinate = gp.getCoordinate(runtime), 
+				start = {x: w < 0 ? coordinate.x + w : coordinate.x, y: h < 0 ? coordinate.y + h : coordinate.y},
+				end = {x: w < 0 ? coordinate.x : coordinate.x + w, y: h < 0 ? coordinate.y : coordinate.y + h}
+				mstart = motionAnchors[0][0],
+				mend = motionAnchors[1][0];
+			//第二象限 wa 第四象限ar 
+			arc = ['wr', ~~start.x, ~~start.y, ~~end.x, ~~end.y, ~~mstart.x, ~~mstart.y, ~~mend.x, ~~mend.y];
+			return gf.drawPath([
+					//first motion anchor
+					{command:p.MOVE,points:motionAnchors[0][0]},
+					arc.join(" ")
+					],this.getStyle(gp,runtime),true);
+		}
+		var r = w > h?h>>1:w>>1,
+			a = geometry.angle(motionAnchors[0][0],cache[0],motionAnchors[1][0]);
+		arc = [p.ARC + r,r,0,(a < 180?0:1) + ",1",motionAnchors[1][0].x + " " + motionAnchors[1][0].y];
+		return gf.drawPath([
 					//first motion anchor
 					{command:p.MOVE,points:motionAnchors[0][0]},
 					arc.join(" ")

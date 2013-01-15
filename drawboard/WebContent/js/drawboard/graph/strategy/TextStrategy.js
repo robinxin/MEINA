@@ -7,7 +7,7 @@ dojo.declare("drawboard.graph.strategy.TextStrategy",drawboard.graph.strategy.Re
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			rotator = gp.getGraphRotator(runtime),
 			a = rotator.angle,
@@ -15,7 +15,7 @@ dojo.declare("drawboard.graph.strategy.TextStrategy",drawboard.graph.strategy.Re
 			transform = ["translate(" + pole.x + "," + pole.y  + ")",
 			             "rotate(" + a + ")",
 			             "translate(" + -pole.x + "," + -pole.y  + ")"];
-		gf.drawText(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),gp.getText(),(a != 0)&&{transform:transform},this.getTextStyle(gp,runtime));
+		return gf.drawText(gp.getCoordinate(runtime),gp.getWidth(runtime),gp.getHeight(runtime),gp.getText(),(a != 0)&&{transform:transform},this.getTextStyle(gp,runtime));
 	},
 	/*String*/getTextStyle:function(/*GraphProxy*/gp,/*ExecuteRuntime*/runtime){
 		return this.getStyleController(runtime).getTextStyle(gp);

@@ -21,10 +21,10 @@ dojo.declare("drawboard.graph.strategy.electricity.VariableResistanceStrategy",d
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//west side start line
 					{command:p.MOVE,points:cache[0]},
 					//west side end line

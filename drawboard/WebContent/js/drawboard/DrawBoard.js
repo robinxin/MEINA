@@ -276,7 +276,6 @@ dojo.declare("drawboard.DrawBoard",[dijit._Templated,drawboard._Selector,drawboa
 		var selectRect = this.getSelectRect(),
 			drawEntity = this.getDrawEntity(),
 			runtime = this.getRuntime();
-		this.drawGraphs(runtime);
 		if(drawEntity){
 			var gs = new drawboard.graph.GraphStatus({_coordinate:{x:drawEntity.x,y:drawEntity.y},_w:drawEntity.width,_h:drawEntity.height}),
 				proxy = new drawboard.graph.GraphProxy(gs,this.getDrawType()||this.getSRGraphStrategyClass()),
@@ -288,6 +287,7 @@ dojo.declare("drawboard.DrawBoard",[dijit._Templated,drawboard._Selector,drawboa
 			runtime.draw(proxy);
 		}
 		selectRect && (runtime.draw(selectRect));
+		this.drawGraphs(runtime);
 		this.fireListener(["draw"]);
 	},
 	/**

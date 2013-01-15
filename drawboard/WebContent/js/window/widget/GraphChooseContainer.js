@@ -67,14 +67,15 @@ dojo.declare("window.widget.GraphChooseContainer",[dijit._Widget,dijit._Template
 			this.accordion.addChild(content);
 	},
 	/*String*/generateGraphContent:function(parent){
-		var html = [],graphItem;
+		var html = ['<ul class="choosenUl">'],graphItem;
 		dojo.forEach(parent.children,function(item){
-			graphItem = ["<div id=",item.id[0]," name=",item.name[0]," title=",item.name[0],"","",""," strategy='",item.strategy[0],"' class='graphIconContainer'><img src='",drawboardRuntimeSetting.blankGif,"' class='graphIcon ",(parent.css||"")," ",item.css[0],"'/>","<span class='graphText'>",item.name[0],"</span></div>"];
+			graphItem = ["<li id=",item.id[0]," name=",item.name[0]," title=",item.name[0],"","",""," strategy='",item.strategy[0],"' class='graphIconContainer'><img src='",drawboardRuntimeSetting.blankGif,"' class='graphIcon ",(parent.css||"")," ",item.css[0],"'/>","<span class='graphText'>",(item.shortName||item.name)[0],"</span></li>"];
 			item.url && (graphItem[6] = " url='" + item.url[0] + "'");
 			item.ratio && (graphItem[7] = " ratio='" + item.ratio[0] + "'");
 			item.affectedByZoom && (graphItem[8] = " affectedByZoom='" + item.affectedByZoom[0] + "'");
 			html.push(graphItem.join(" "));
 		},this);
+		html.push('</ul>');
 		return html.join(" ");
 	},
 	/*Node*/getGraphNode:function(/*Event*/e){

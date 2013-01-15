@@ -4,12 +4,17 @@ dojo.require("drawboard.DrawBoard");
 dojo.require("drawboard.ZoomDrawBoard");
 dojo.require("common.utils.BrowerUtils");
 dojo.require("drawboard.graphic.SVGGraphic");
+dojo.require("drawboard.graphic.VMLGraphic");
 dojo.require("drawboard.graphic.CanvasGraphic");
+dojo.require("window.widget.GraphChooseContainer");
+dojo.require("window.widget.Toolbar");
 (function(){
 var geometry = common.calc.Geometry,
 	rotate = geometry.rotation;
 window.Entrance = {
 	graphic:null,
+	db: null,
+	graphicClass: null,
 	test:function(){
 		var browerType = common.utils.BrowerUtils.getBrowerType(),
 			version = browerType.ie,
@@ -17,9 +22,10 @@ window.Entrance = {
 		if(version){
 			version = version.substr(0,1);
 			if(version == "8" || version == "7" || version == "6" || version == "5"){
-				graphicClass = drawboard.graphic.SVGIEGraphic;
+				graphicClass = drawboard.graphic.VMLGraphic;
 			}
 		}
+		this.graphicClass = graphicClass;
         this.graphic = new graphicClass();
 		this.testGraphClassPanel();
 		this.ready();
@@ -40,10 +46,10 @@ window.Entrance = {
 			fixNode = document.getElementById("graphNode");
 		if(!db){
 			div = dojo.create("div",{},dojo.byId("graphNode"));
-			div.style.width = box.w - 191 + "px";
+			div.style.width = box.w - 212 + "px";
 			div.style.height = box.h - 39 + "px";
 			div.style.border = "1px solid black";
-			this.db = new drawboard.DrawBoard({w:(box.w - 191),h:(box.h - 39),graphicClass:drawboard.graphic.SVGIEGraphic,_graphic:this.graphic,fixNode:fixNode},dojo.create("div",null,div));
+			this.db = new drawboard.DrawBoard({w:(box.w - 212),h:(box.h - 39),graphicClass:this.graphicClass,_graphic:this.graphic,fixNode:fixNode},dojo.create("div",null,div));
 		}
 		return this.db;
 	},
@@ -67,9 +73,9 @@ window.Entrance = {
 	/*void*/testGraphClassPanel:function(){		
 		var box = common.utils.BrowerUtils.getWindowBox(),
 			graphContainer,dbToolbar,db;
-		dojo.byId("graphNode").style.width = (box.w - 192) + "px";
+		dojo.byId("graphNode").style.width = (box.w - 212) + "px";
 		dojo.byId("graphNode").style.height = (box.h - 30) + "px";
-		graphContainer = new window.widget.GraphChooseContainer({width:"192px",height:(box.h - 30) + "px"},dojo.create("div",null,dojo.byId("toolsNode")));
+		graphContainer = new window.widget.GraphChooseContainer({width:"212px",height:(box.h - 30) + "px"},dojo.create("div",null,dojo.byId("toolsNode")));
 		dbToolbar = new window.widget.Toolbar({},dojo.create("div",null,dojo.byId("navigator")));
 		db = this.db = this.createDrawboard();
 		graphContainer.setDrawboard(db);

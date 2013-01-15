@@ -198,7 +198,10 @@ dojo.declare("drawboard._Selector",drawboard.container.LayoutContainer,{
 			setActive = dojo.hitch(runtime.getDrawProcessor(),"setActive"),
 			selectRect = this.getSelectRect(),
 			preActive = this.getActive(),
-			status = this._status;
+			graphic = this.getg
+			status = this._status,
+			graphic = runtime.getGraphic();
+			target = e.target;
 		this.setMouseStatus(mouseStatus.MOUSEDOWN);
 		if(status && status == actionStatus.TEXT){
 			return;
@@ -209,6 +212,16 @@ dojo.declare("drawboard._Selector",drawboard.container.LayoutContainer,{
 			return;
 		}
 		selectRect && (active = setActive(selectRect,point,this._isMark,markController,runtime));
+
+		if(!active && graphic.isGraphMark(target.tagName)){
+			//first focus the active graph
+			preActive && (active = setActive(preActive,point,this._isMark,markController,runtime));
+			(!active) && (idty = target.getAttribute("id")) && this.some(function(/*GraphProxy*/gp){
+				gp.getIdty() == idty && (active = {active:gp, decorate:null, status: actionStatus.MOVING});
+				if(active){return true;}
+			},this,true);
+			var idty;
+		}
 		//get the graph status information which contains the point
 		if(!active){
 			//first focus the active graph

@@ -13,10 +13,10 @@ dojo.declare("drawboard.graph.strategy.SquareStrategy",drawboard.graph.strategy.
 	/**
 	 * draw graph only
 	 */
-	/*void*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
+	/*Node*/draw:function(/*GraphProxy*/gp,/*Graphic*/gf,/*ExecuteRuntime*/runtime){
 		var p = constant.Path,
 			cache = gp.getGraphCoordinates(runtime);
-		gf.drawPath([
+		return gf.drawPath([
 					//west north corner
 					{command:p.MOVE,points:cache[0]},
 					//east north corner
@@ -24,7 +24,8 @@ dojo.declare("drawboard.graph.strategy.SquareStrategy",drawboard.graph.strategy.
 					//east south corner
 					{command:p.LINE,points:cache[2]},
 					//west south corner
-					{command:p.LINE,points:cache[3]}
+					{command:p.LINE,points:cache[3]},
+					{command:p.LINE,points:cache[0]}
 		            ],this.getStyle(gp,runtime));
 	},
 	/**
