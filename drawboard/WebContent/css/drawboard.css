@@ -147,7 +147,7 @@
  ****************************/
  .graphIconContainer,.graphIcon{
  	height:26px;
-    _height: 30px;
+    /*_height: 30px;*/
  	cursor:pointer;
  }
  .graphIconContainer{
@@ -155,7 +155,7 @@
  	margin:2px;
  	padding:2px;
  	border: 1px solid transparent;
-    _border: 0px;
+  /*_border: 0px;*/
  	float:left;
  }
  .graphIcon{
